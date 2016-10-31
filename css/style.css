@@ -15,7 +15,7 @@ header {
 }
 
 /* main menu ul */
-header ul.hmenu {
+ul.hmenu {
     text-decoration: none;
     text-align: top center;
     padding-top: 1.5em;
@@ -23,11 +23,11 @@ header ul.hmenu {
 }
 
 /* main menu ul li*/
-header ul.hmenu li {
+ul.hmenu li {
     display: inline;
     margin: 3.125em;
     font-size: 1.15em;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 /*HNDWD logo in main menu*/
@@ -40,7 +40,7 @@ header h1 {
     text-align: center;
     margin-top: 3.5em;
     font-size: 3em;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: .1em;
 }
 
@@ -82,7 +82,11 @@ footer {
 /*follow footer menu*/
 .follow {
     float: left;
-    line-height: 2em;
+    line-height: 1.8em;
+}
+
+.follow li {
+    font-size: 0.95em;
 }
 
 /*right footer menu*/
@@ -100,7 +104,7 @@ div.fmenu ul li {
 .ftext {
     font: 1em / 1.5 Vollkorn, serif; 
     color: #A8A8A8;
-    margin-top: 2em;
+    margin-top: 3.5em;
     line-height: 1.8em;
     
 }
