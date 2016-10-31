@@ -3,6 +3,27 @@ body {
     color: #303030;
 }
 
+/*responsiveness test*/
+
+@media (max-width: 1250px) and (orientation: landscape) {
+    body { 
+        font-size: 12px;}
+    .featgood img {
+        display: inline-block;
+        width: 13em;
+        margin: 1.5em; }
+}
+
+@media (min-width: 1920px) and (orientation: landscape) {
+    body { 
+        font-size: 23px;}
+    .featgood img {
+        display: inline-block;
+        width: 16em;
+        margin: 2em; }
+}
+/**/
+
 /*header stuff*/
 
 header {
@@ -19,7 +40,7 @@ ul.hmenu {
     text-decoration: none;
     text-align: top center;
     padding-top: 1.5em;
-    padding-right: 2.7em;
+    margin-right: 3em;
 }
 
 /* main menu ul li*/
@@ -66,6 +87,32 @@ header h3 {
     font-size: 1.5em;
     font-weight: 700;
     letter-spacing: .1em;
+}
+
+.featgood {
+    background-color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 4em;
+    text-align: center;
+}
+
+.featgood img {
+    display: inline-block;
+    width: 16em;
+    margin: 2em;
+}
+
+.featgood img:hover {
+    -webkit-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    -moz-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    -o-transition: box-shadow 0.5s ease-in-out; 
+    -ms-transition: box-shadow 0.5s ease-in-out; 
+    -moz-transition: box-shadow 0.5s ease-in-out; 
+    -webkit-transition: box-shadow 0.5s ease-in-out; 
+    transition: box-shadow 0.5s ease-in-out; 
 }
 
 /*end of main part of body stuff*/
@@ -126,6 +173,8 @@ footer {
 .hmenu a:hover, .hmenu a:active {
     color:#000;
 }
+
+/*main links*/
 
 /*footer links*/
 footer a {
