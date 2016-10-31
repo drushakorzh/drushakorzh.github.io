@@ -1,0 +1,139 @@
+body {
+    font: 16px / 1.5 Montserrat, sans-serif; 
+    color: #303030;
+}
+
+/*header stuff*/
+
+header {
+	background-color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 11.8em;
+	text-align: center;
+}
+
+/* main menu ul */
+header ul.hmenu {
+    text-decoration: none;
+    text-align: top center;
+    padding-top: 1.5em;
+    padding-right: 2.7em;
+}
+
+/* main menu ul li*/
+header ul.hmenu li {
+    display: inline;
+    margin: 3.125em;
+    font-size: 1.15em;
+    font-weight: 900;
+}
+
+/*HNDWD logo in main menu*/
+#logo {
+    font-size: 1.55em;
+}
+
+/*HANDWOOD text*/
+header h1 {
+    text-align: center;
+    margin-top: 3.5em;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+/*aesthetic collective text*/
+header h3 {
+    font: 1.2em / 1.5 Vollkorn, serif; 
+    color: #303030;
+    margin-top: 2em;
+}
+
+/*end of header stuff*/
+/*main part of body stuff*/
+
+/*header for the site sections*/
+.hdr {
+    background-color: #FAFAFA;
+	background-position: center;
+	padding: 3em;
+	text-align: center;
+}
+
+main div.hdr h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+/*end of main part of body stuff*/
+
+/*footer stuff*/
+footer {
+    background-color: #424242;
+	background-position: center;
+	padding: 2em 11.7em 14em 14em;
+    color: #FAFAFA;
+    line-height: 1.8;
+}
+
+/*follow footer menu*/
+.follow {
+    float: left;
+    line-height: 2em;
+}
+
+/*right footer menu*/
+.fmenu {
+    float: right;
+}
+
+div.fmenu ul li {
+    display: inline;
+    margin-right: 4em;
+    margin-top: 4em;
+    font-size: 1em;
+}
+
+.ftext {
+    font: 1em / 1.5 Vollkorn, serif; 
+    color: #A8A8A8;
+    margin-top: 2em;
+    line-height: 1.8em;
+    
+}
+
+/*end of footer stuff*/
+/*links*/
+
+/*header links*/
+.hmenu a {
+    color: #616161;
+    -o-transition:color .3s ease-out;
+    -ms-transition:color .3s ease-out;
+    -moz-transition:color .3s ease-out;
+    -webkit-transition:color .3s ease-out;
+    transition:color .3s ease-out;
+    text-decoration: none;
+}
+
+.hmenu a:hover, .hmenu a:active {
+    color:#000;
+}
+
+/*footer links*/
+footer a {
+    color: #D1D1D1;
+    -o-transition:color .3s ease-out;
+    -ms-transition:color .3s ease-out;
+    -moz-transition:color .3s ease-out;
+    -webkit-transition:color .3s ease-out;
+    transition:color .3s ease-out;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:active {
+    color:#FFF;
+}
