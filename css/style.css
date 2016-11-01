@@ -214,10 +214,12 @@ header h3 {
 
 /*footer stuff*/
 footer {
-    background-color: #424242;
+    background-color: #F4F7F5;
 	background-position: center;
 	padding: 2em 11.7em 12em 14em;
-    color: #FAFAFA;
+    color: #3C3D3D;
+    height: auto;
+    width: auto;
     line-height: 1.8;
 }
 
@@ -245,7 +247,7 @@ footer {
 
 .ftext {
     font: 1em / 1.5 Vollkorn, serif; 
-    color: #A8A8A8;
+    color: #3C3D3D;
     margin-top: 3.5em;
     line-height: 1.8em;
     
@@ -279,7 +281,7 @@ footer {
 
 
 footer a {
-    color: #D1D1D1;
+    color: #767877;
     -o-transition:color .3s ease-out;
     -ms-transition:color .3s ease-out;
     -moz-transition:color .3s ease-out;
@@ -289,5 +291,5 @@ footer a {
 }
 
 footer a:hover, footer a:active {
-    color:#FFF;
+    color:#000;
 }
