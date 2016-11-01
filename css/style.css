@@ -16,7 +16,7 @@ body {
 
 @media (min-width: 1920px) and (orientation: landscape) {
     body { 
-        font-size: 23px;}
+        font-size: 22px;}
     .featgood img {
         display: inline-block;
         width: 16em;
@@ -46,7 +46,7 @@ ul.hmenu {
 /* main menu ul li*/
 ul.hmenu li {
     display: inline;
-    margin: 3.125em;
+    margin: 4em;
     font-size: 1.15em;
     font-weight: 700;
 }
@@ -86,6 +86,7 @@ header h3 {
 .hdr h2 {
     font-size: 1.5em;
     font-weight: 700;
+    margin-left: 0.5em;
     letter-spacing: .1em;
 }
 
@@ -102,7 +103,7 @@ header h3 {
 
 .featgood img {
     display: inline-block;
-    width: 16em;
+    width: 14.2em;
     margin: 2em;
     -o-transition: box-shadow 0.5s ease-in-out; 
     -ms-transition: box-shadow 0.5s ease-in-out; 
@@ -134,9 +135,9 @@ header h3 {
 */
 
 .featgood img:hover {
-    -webkit-box-shadow: 0px 57px 79px -20px rgba(84,84,84,0.72);
-    -moz-box-shadow: 0px 57px 79px -20px rgba(84,84,84,0.72);
-    box-shadow: 0px 57px 79px -20px rgba(84,84,84,0.72);
+    -webkit-box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
+    -moz-box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
+    box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
 }
 
 .featgood figure {
@@ -146,25 +147,24 @@ header h3 {
 /*last updates section*/
 
 .lastupd {
-    font-family: 16px Vollkorn, serif; 
+    font: 2em Vollkorn, serif;
+    color: #FAFAFA;
+    letter-spacing: 0.17em;
     background-color: #fdfdfd;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding-bottom: 5em;
+	padding-bottom: 2.5em;
     text-align: center;
 }
 
+/*block for content placement*/
+
 .newsblock {
     display: inline-block;
-    background-color: #f5f5f5;
     text-align: center;
-    
-    font-size: 1em;
-    width: 60em;
-    height: 20em;
-    line-height: 20em;
-    margin-top: 3em;
+    width: 35em;
+    height: 10em;
+    line-height: 10em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
     -o-transition: box-shadow 0.5s ease-in-out; 
     -ms-transition: box-shadow 0.5s ease-in-out; 
     -moz-transition: box-shadow 0.5s ease-in-out; 
@@ -172,11 +172,42 @@ header h3 {
     transition: box-shadow 0.5s ease-in-out; 
 }
 
+/*content block styles*/
+
+#newskhomich {
+    background: linear-gradient(
+    rgba(20,20,20, .5), 
+    rgba(20,20,20, .5)),
+    url('../img/lastupd/khomich.png');
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#newscreate {
+    background: linear-gradient(
+    rgba(20,20,20, .5), 
+    rgba(20,20,20, .5)),
+    url('../img/lastupd/create.png');
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#newsflava {
+    background: linear-gradient(
+    rgba(20,20,20, .5), 
+    rgba(20,20,20, .5)),
+    url('../img/lastupd/flava.png');
+    background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .newsblock:hover {
-    -webkit-box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
-    -moz-box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
-    box-shadow: 0px 35px 43px -16px rgba(133,133,133,0.65);
+    -webkit-box-shadow: 0px 41px 36px -13px rgba(107,107,107,0.7);
+    -moz-box-shadow: 0px 41px 36px -13px rgba(107,107,107,0.7);
+    box-shadow: 0px 41px 36px -13px rgba(107,107,107,0.7);
 }
 
 /*end of main part of body stuff*/
@@ -240,7 +271,13 @@ footer {
 
 /*main links*/
 
+.lastupd a {
+    color: #FAFAFA;
+}
+
 /*footer links*/
+
+
 footer a {
     color: #D1D1D1;
     -o-transition:color .3s ease-out;
