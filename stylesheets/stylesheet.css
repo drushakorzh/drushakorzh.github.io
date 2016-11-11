@@ -1,0 +1,315 @@
+/* line 51, ../sass/stylesheet.scss */
+body {
+  font: 16px/1.5 Montserrat, sans-serif;
+  color: #303030;
+}
+
+/*responsiveness test*/
+@media (max-width: 1250px) and (orientation: landscape) {
+  /* line 59, ../sass/stylesheet.scss */
+  body {
+    font-size: 12px;
+  }
+
+  /* line 61, ../sass/stylesheet.scss */
+  .featgood img {
+    display: inline-block;
+    width: 13em;
+    margin: 1.5em;
+  }
+}
+@media (max-width: 930px) and (orientation: landscape) {
+  /* line 68, ../sass/stylesheet.scss */
+  body {
+    font-size: 11px;
+  }
+
+  /* line 70, ../sass/stylesheet.scss */
+  .featgood img {
+    display: inline-block;
+    width: 11em;
+    margin: 1.3em;
+  }
+}
+@media (min-width: 1920px) and (orientation: landscape) {
+  /* line 77, ../sass/stylesheet.scss */
+  body {
+    font-size: 22px;
+  }
+
+  /* line 79, ../sass/stylesheet.scss */
+  .featgood img {
+    display: inline-block;
+    width: 16em;
+    margin: 2em;
+  }
+}
+/**/
+/*header stuff*/
+/* line 89, ../sass/stylesheet.scss */
+header {
+  background-color: #fff;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 11.8em;
+  text-align: center;
+}
+
+/* main menu ul and li */
+/* line 99, ../sass/stylesheet.scss */
+ul.hmenu {
+  text-decoration: none;
+  text-align: top center;
+  padding-top: 1.5em;
+  margin-right: 3em;
+}
+/* line 105, ../sass/stylesheet.scss */
+ul.hmenu li {
+  display: inline;
+  margin: 4em;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+/*HNDWD logo in main menu*/
+/* line 114, ../sass/stylesheet.scss */
+#logo {
+  font-size: 1.55em;
+}
+
+/*HANDWOOD text*/
+/* line 119, ../sass/stylesheet.scss */
+header h1 {
+  text-align: center;
+  margin-top: 3.5em;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/*aesthetic collective text*/
+/* line 128, ../sass/stylesheet.scss */
+header h3 {
+  font: 1.2em/1.5 Vollkorn, serif;
+  margin-top: 2em;
+}
+
+/*end of header stuff*/
+/*main part of body stuff*/
+/*header for the site sections*/
+/* line 137, ../sass/stylesheet.scss */
+.hdr {
+  background-color: #fafafa;
+  background-position: center;
+  padding: 3em;
+  text-align: center;
+}
+/* line 143, ../sass/stylesheet.scss */
+.hdr h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-left: .5em;
+  letter-spacing: .1em;
+}
+
+/*featured goods section*/
+/* line 153, ../sass/stylesheet.scss */
+.featgood {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 4em;
+  text-align: center;
+}
+/* line 160, ../sass/stylesheet.scss */
+.featgood img {
+  -o-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  display: inline-block;
+  width: 14.2em;
+  margin: 2em;
+}
+
+/*  this way doesn't work and i don't understand why
+    should try it later
+    THIS
+    http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+
+
+.featgood img::after {
+    -webkit-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    -moz-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.featgood img:hover::after {
+      opacity: 1;
+}
+*/
+/* line 191, ../sass/stylesheet.scss */
+.featgood img:hover {
+  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+}
+
+/* line 195, ../sass/stylesheet.scss */
+.featgood figure {
+  display: inline-block;
+}
+
+/*last updates section*/
+/* line 201, ../sass/stylesheet.scss */
+.lastupd {
+  font: 2em Vollkorn, serif;
+  color: #fdfdfd;
+  letter-spacing: 0.17em;
+  background-color: #fdfdfd;
+  padding-bottom: 2.5em;
+  text-align: center;
+}
+
+/*block for content placement*/
+/* line 212, ../sass/stylesheet.scss */
+.newsblock {
+  -o-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  width: 35em;
+  height: 10em;
+  line-height: 10em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+/*content block styles*/
+/* line 225, ../sass/stylesheet.scss */
+#newskhomich {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/khomich.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 235, ../sass/stylesheet.scss */
+#newscreate {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/create.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 245, ../sass/stylesheet.scss */
+#newsflava {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/flava.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 255, ../sass/stylesheet.scss */
+.newsblock:hover {
+  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+}
+
+/*end of main part of body stuff*/
+/*footer stuff*/
+/* line 262, ../sass/stylesheet.scss */
+footer {
+  background-color: #F5F5F5;
+  background-position: center;
+  padding: 2em 11.7em 12em 14em;
+  color: #3c3d3d;
+  height: auto;
+  width: auto;
+  line-height: 1.8;
+}
+
+/*follow footer menu*/
+/* line 273, ../sass/stylesheet.scss */
+.follow {
+  float: left;
+  line-height: 1.8em;
+}
+/* line 277, ../sass/stylesheet.scss */
+.follow li {
+  font-size: 0.95em;
+}
+
+/*right footer menu*/
+/* line 283, ../sass/stylesheet.scss */
+.fmenu {
+  float: right;
+}
+/* line 286, ../sass/stylesheet.scss */
+.fmenu li {
+  display: inline;
+  margin-right: 4em;
+  margin-top: 4em;
+  font-size: 1em;
+}
+
+/* line 294, ../sass/stylesheet.scss */
+.ftext {
+  font: 1em/1.5 Vollkorn, serif;
+  margin-top: 3.5em;
+  line-height: 1.8em;
+}
+
+/*end of footer stuff*/
+/*links*/
+/*header links*/
+/* line 305, ../sass/stylesheet.scss */
+.hmenu a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #616161;
+  text-decoration: none;
+}
+
+/* line 311, ../sass/stylesheet.scss */
+.hmenu a:hover, .hmenu a:active {
+  color: #000;
+}
+
+/*main links*/
+/* line 317, ../sass/stylesheet.scss */
+.lastupd a {
+  color: #fafafa;
+}
+
+/*footer links*/
+/* line 324, ../sass/stylesheet.scss */
+footer a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #767877;
+  text-decoration: none;
+}
+
+/* line 330, ../sass/stylesheet.scss */
+footer a:hover, footer a:active {
+  color: #000;
+}

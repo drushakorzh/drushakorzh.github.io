@@ -1,6 +1,56 @@
+//fonts
+$primary-font: Montserrat, sans-serif;
+$secondary-font: Vollkorn, serif;
+
+//font colors
+$primary-fontcolor: #303030;
+$footer-fontcolor: #3c3d3d;
+$lastupd-fontcolor: #fdfdfd;
+
+//bg colors
+$header-bgcolor: #fff;
+$footer-bgcolor: #F5F5F5;
+$main-bgcolor: #fdfdfd;
+$main-hdrcolor: #fafafa;
+
+//link colors
+$black: #000;
+$header-linkcolor: #616161;
+$footer-linkcolor: #767877;
+
+
+//mixins
+@mixin shadow() {
+    -webkit-box-shadow: 0px 22px 20px -8px
+        rgba(128,128,128,0.85);
+    -moz-box-shadow: 0px 22px 20px -8px
+        rgba(128,128,128,0.85);
+    box-shadow: 0px 22px 20px -8px
+        rgba(128,128,128,0.85); 
+}
+
+@mixin shadow-transition() {
+    -o-transition: box-shadow 0.5s ease-in-out; 
+    -ms-transition: box-shadow 0.5s ease-in-out; 
+    -moz-transition: box-shadow 0.5s ease-in-out; 
+    -webkit-transition: box-shadow 0.5s ease-in-out; 
+    transition: box-shadow 0.5s ease-in-out; 
+}
+
+@mixin menu-transition() {
+    -o-transition:color .3s ease-out;
+    -ms-transition:color .3s ease-out;
+    -moz-transition:color .3s ease-out;
+    -webkit-transition:color .3s ease-out;
+    transition:color .3s ease-out;
+}
+
+
+//main code
+
 body {
-    font: 16px / 1.5 Montserrat, sans-serif; 
-    color: #303030;
+    font: 16px / 1.5 $primary-font; 
+    color: $primary-fontcolor;
 }
 
 /*responsiveness test*/
@@ -37,7 +87,7 @@ body {
 /*header stuff*/
 
 header {
-	background-color: #FFFFFF;
+	background-color: $header-bgcolor;
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -45,20 +95,19 @@ header {
 	text-align: center;
 }
 
-/* main menu ul */
+/* main menu ul and li */
 ul.hmenu {
     text-decoration: none;
     text-align: top center;
     padding-top: 1.5em;
     margin-right: 3em;
-}
-
-/* main menu ul li*/
-ul.hmenu li {
-    display: inline;
-    margin: 4em;
-    font-size: 1.15em;
-    font-weight: 700;
+    
+    li {
+        display: inline;
+        margin: 4em;
+        font-size: 1.15em;
+        font-weight: 700;
+    }
 }
 
 /*HNDWD logo in main menu*/
@@ -77,8 +126,7 @@ header h1 {
 
 /*aesthetic collective text*/
 header h3 {
-    font: 1.2em / 1.5 Vollkorn, serif; 
-    color: #303030;
+    font: 1.2em / 1.5 $secondary-font; 
     margin-top: 2em;
 }
 
@@ -87,40 +135,36 @@ header h3 {
 
 /*header for the site sections*/
 .hdr {
-    background-color: #FAFAFA;
+    background-color: $main-hdrcolor;
 	background-position: center;
 	padding: 3em;
 	text-align: center;
-}
-
-.hdr h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-left: 0.5em;
-    letter-spacing: .1em;
+    
+    h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-left: .5em;
+        letter-spacing: .1em;
+    }
 }
 
 /*featured goods section*/
 
 .featgood {
-    background-color: #fdfdfd;
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-bottom: 4em;
     text-align: center;
+    
+    img {
+        @include shadow-transition();
+        display: inline-block;
+        width: 14.2em;
+        margin: 2em;
+    }
 }
 
-.featgood img {
-    display: inline-block;
-    width: 14.2em;
-    margin: 2em;
-    -o-transition: box-shadow 0.5s ease-in-out; 
-    -ms-transition: box-shadow 0.5s ease-in-out; 
-    -moz-transition: box-shadow 0.5s ease-in-out; 
-    -webkit-transition: box-shadow 0.5s ease-in-out; 
-    transition: box-shadow 0.5s ease-in-out; 
-}
 /*  this way doesn't work and i don't understand why
     should try it later
     THIS
@@ -145,9 +189,7 @@ header h3 {
 */
 
 .featgood img:hover {
-    -webkit-box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
-    -moz-box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
-    box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
+    @include shadow();
 }
 
 .featgood figure {
@@ -157,10 +199,10 @@ header h3 {
 /*last updates section*/
 
 .lastupd {
-    font: 2em Vollkorn, serif;
-    color: #FAFAFA;
+    font: 2em $secondary-font;
+    color: $lastupd-fontcolor;
     letter-spacing: 0.17em;
-    background-color: #fdfdfd;
+    background-color: $main-bgcolor;
 	padding-bottom: 2.5em;
     text-align: center;
 }
@@ -168,6 +210,7 @@ header h3 {
 /*block for content placement*/
 
 .newsblock {
+    @include shadow-transition();
     display: inline-block;
     text-align: center;
     width: 35em;
@@ -175,11 +218,6 @@ header h3 {
     line-height: 10em;
     margin-top: 1.5em;
     margin-bottom: 1em;
-    -o-transition: box-shadow 0.5s ease-in-out; 
-    -ms-transition: box-shadow 0.5s ease-in-out; 
-    -moz-transition: box-shadow 0.5s ease-in-out; 
-    -webkit-transition: box-shadow 0.5s ease-in-out; 
-    transition: box-shadow 0.5s ease-in-out; 
 }
 
 /*content block styles*/
@@ -188,7 +226,7 @@ header h3 {
     background: linear-gradient(
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
-    url('../img/lastupd/khomich.png');
+    url('../images/lastupd/khomich.png');
     background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -198,7 +236,7 @@ header h3 {
     background: linear-gradient(
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
-    url('../img/lastupd/create.png');
+    url('../images/lastupd/create.png');
     background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -208,26 +246,24 @@ header h3 {
     background: linear-gradient(
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
-    url('../img/lastupd/flava.png');
+    url('../images/lastupd/flava.png');
     background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .newsblock:hover {
-    -webkit-box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
-    -moz-box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
-    box-shadow: 0px 22px 20px -8px rgba(128,128,128,0.85);
+    @include shadow
 }
 
 /*end of main part of body stuff*/
 
 /*footer stuff*/
 footer {
-    background-color: #F4F7F5;
+    background-color: $footer-bgcolor;
 	background-position: center;
 	padding: 2em 11.7em 12em 14em;
-    color: #3C3D3D;
+    color: $footer-fontcolor;
     height: auto;
     width: auto;
     line-height: 1.8;
@@ -237,27 +273,26 @@ footer {
 .follow {
     float: left;
     line-height: 1.8em;
-}
-
-.follow li {
-    font-size: 0.95em;
+    
+    li {
+        font-size: 0.95em;
+    }
 }
 
 /*right footer menu*/
 .fmenu {
     float: right;
-}
-
-.fmenu ul li {
-    display: inline;
-    margin-right: 4em;
-    margin-top: 4em;
-    font-size: 1em;
+    
+    li {
+        display: inline;
+        margin-right: 4em;
+        margin-top: 4em;
+        font-size: 1em; 
+    }
 }
 
 .ftext {
-    font: 1em / 1.5 Vollkorn, serif; 
-    color: #3C3D3D;
+    font: 1em / 1.5 $secondary-font; 
     margin-top: 3.5em;
     line-height: 1.8em;
     
@@ -268,38 +303,30 @@ footer {
 
 /*header links*/
 .hmenu a {
-    color: #616161;
-    -o-transition:color .3s ease-out;
-    -ms-transition:color .3s ease-out;
-    -moz-transition:color .3s ease-out;
-    -webkit-transition:color .3s ease-out;
-    transition:color .3s ease-out;
+    @include menu-transition();
+    color: $header-linkcolor;
     text-decoration: none;
 }
 
 .hmenu a:hover, .hmenu a:active {
-    color:#000;
+    color: $black;
 }
 
 /*main links*/
 
 .lastupd a {
-    color: #FAFAFA;
+    color: $main-hdrcolor;
 }
 
 /*footer links*/
 
 
 footer a {
-    color: #767877;
-    -o-transition:color .3s ease-out;
-    -ms-transition:color .3s ease-out;
-    -moz-transition:color .3s ease-out;
-    -webkit-transition:color .3s ease-out;
-    transition:color .3s ease-out;
+    @include menu-transition();
+    color: $footer-linkcolor;
     text-decoration: none;
 }
 
 footer a:hover, footer a:active {
-    color:#000;
+    color: $black;
 }

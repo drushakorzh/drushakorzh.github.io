@@ -1,0 +1,240 @@
+body {
+  font: 16px/1.5 Montserrat, sans-serif;
+  color: #303030; }
+
+/*responsiveness test*/
+@media (max-width: 1250px) and (orientation: landscape) {
+  body {
+    font-size: 12px; }
+
+  .featgood img {
+    display: inline-block;
+    width: 13em;
+    margin: 1.5em; } }
+@media (max-width: 930px) and (orientation: landscape) {
+  body {
+    font-size: 11px; }
+
+  .featgood img {
+    display: inline-block;
+    width: 11em;
+    margin: 1.3em; } }
+@media (min-width: 1920px) and (orientation: landscape) {
+  body {
+    font-size: 22px; }
+
+  .featgood img {
+    display: inline-block;
+    width: 16em;
+    margin: 2em; } }
+/**/
+/*header stuff*/
+header {
+  background-color: white;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 11.8em;
+  text-align: center; }
+
+/* main menu ul and li */
+ul.hmenu {
+  text-decoration: none;
+  text-align: top center;
+  padding-top: 1.5em;
+  margin-right: 3em; }
+  ul.hmenu li {
+    display: inline;
+    margin: 4em;
+    font-size: 1.15em;
+    font-weight: 700; }
+
+/*HNDWD logo in main menu*/
+#logo {
+  font-size: 1.55em; }
+
+/*HANDWOOD text*/
+header h1 {
+  text-align: center;
+  margin-top: 3.5em;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: .1em; }
+
+/*aesthetic collective text*/
+header h3 {
+  font: 1.2em/1.5 Vollkorn, serif;
+  margin-top: 2em; }
+
+/*end of header stuff*/
+/*main part of body stuff*/
+/*header for the site sections*/
+.hdr {
+  background-color: #fafafa;
+  background-position: center;
+  padding: 3em;
+  text-align: center; }
+  .hdr h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-left: .5em;
+    letter-spacing: .1em; }
+
+/*featured goods section*/
+.featgood {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 4em;
+  text-align: center; }
+  .featgood img {
+    -o-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+    display: inline-block;
+    width: 14.2em;
+    margin: 2em; }
+
+/*  this way doesn't work and i don't understand why
+    should try it later
+    THIS
+    http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.34);
+
+
+.featgood img::after {
+    -webkit-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    -moz-box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    box-shadow: 2px 26px 60px -9px rgba(0,0,0,0.34);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.featgood img:hover::after {
+      opacity: 1;
+}
+*/
+.featgood img:hover {
+  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85); }
+
+.featgood figure {
+  display: inline-block; }
+
+/*last updates section*/
+.lastupd {
+  font: 2em Vollkorn, serif;
+  color: #fdfdfd;
+  letter-spacing: 0.17em;
+  background-color: #fdfdfd;
+  padding-bottom: 2.5em;
+  text-align: center; }
+
+/*block for content placement*/
+.newsblock {
+  -o-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  width: 35em;
+  height: 10em;
+  line-height: 10em;
+  margin-top: 1.5em;
+  margin-bottom: 1em; }
+
+/*content block styles*/
+#newskhomich {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/khomich.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#newscreate {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/create.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#newsflava {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/flava.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.newsblock:hover {
+  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85); }
+
+/*end of main part of body stuff*/
+/*footer stuff*/
+footer {
+  background-color: whitesmoke;
+  background-position: center;
+  padding: 2em 11.7em 12em 14em;
+  color: #3c3d3d;
+  height: auto;
+  width: auto;
+  line-height: 1.8; }
+
+/*follow footer menu*/
+.follow {
+  float: left;
+  line-height: 1.8em; }
+  .follow li {
+    font-size: 0.95em; }
+
+/*right footer menu*/
+.fmenu {
+  float: right; }
+  .fmenu li {
+    display: inline;
+    margin-right: 4em;
+    margin-top: 4em;
+    font-size: 1em; }
+
+.ftext {
+  font: 1em/1.5 Vollkorn, serif;
+  margin-top: 3.5em;
+  line-height: 1.8em; }
+
+/*end of footer stuff*/
+/*links*/
+/*header links*/
+.hmenu a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #616161;
+  text-decoration: none; }
+
+.hmenu a:hover, .hmenu a:active {
+  color: black; }
+
+/*main links*/
+.lastupd a {
+  color: #fafafa; }
+
+/*footer links*/
+footer a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #767877;
+  text-decoration: none; }
+
+footer a:hover, footer a:active {
+  color: black; }
