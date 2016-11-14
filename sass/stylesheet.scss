@@ -1,6 +1,7 @@
 //fonts
 $primary-font: Montserrat, sans-serif;
 $secondary-font: Vollkorn, serif;
+$blog-font: Roboto, sans-serif;
 
 //font colors
 $primary-fontcolor: #303030;
@@ -9,9 +10,10 @@ $lastupd-fontcolor: #fdfdfd;
 
 //bg colors
 $header-bgcolor: #fff;
-$footer-bgcolor: #F5F5F5;
+$footer-bgcolor: #f5f5f5;
 $main-bgcolor: #fdfdfd;
-$main-hdrcolor: #fafafa;
+$article-bgcolor: #fafafa;
+$main-hdrcolor: #f7f7f7;
 
 //link colors
 $black: #000;
@@ -21,12 +23,12 @@ $footer-linkcolor: #767877;
 
 //mixins
 @mixin shadow() {
-    -webkit-box-shadow: 0px 22px 20px -8px
-        rgba(128,128,128,0.85);
-    -moz-box-shadow: 0px 22px 20px -8px
-        rgba(128,128,128,0.85);
-    box-shadow: 0px 22px 20px -8px
-        rgba(128,128,128,0.85); 
+    -webkit-box-shadow: 0px 52px 127px -7px 
+        rgba(189,189,189,0.6);
+    -moz-box-shadow: 0px 52px 127px -7px 
+        rgba(189,189,189,0.6);
+    box-shadow: 0px 52px 127px -7px 
+        rgba(189,189,189,0.6);
 }
 
 @mixin shadow-transition() {
@@ -37,6 +39,12 @@ $footer-linkcolor: #767877;
     transition: box-shadow 0.5s ease-in-out; 
 }
 
+@mixin footer-blog-links() {
+    @include menu-transition();
+    color: $footer-linkcolor;
+    text-decoration: none;
+}
+
 @mixin menu-transition() {
     -o-transition:color .3s ease-out;
     -ms-transition:color .3s ease-out;
@@ -45,12 +53,27 @@ $footer-linkcolor: #767877;
     transition:color .3s ease-out;
 }
 
+@mixin bgcenter() {
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin bgcentertop() {
+    background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 //main code
 
 body {
     font: 16px / 1.5 $primary-font; 
     color: $primary-fontcolor;
+}
+
+strong {
+    font-weight: 700;
 }
 
 /*responsiveness test*/
@@ -87,12 +110,23 @@ body {
 /*header stuff*/
 
 header {
-	background-color: $header-bgcolor;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: $main-bgcolor;
 	padding-bottom: 11.8em;
 	text-align: center;
+    @include bgcentertop();
+    /*HANDWOOD text*/
+    h1 {
+    text-align: center;
+    margin-top: 3.5em;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: .1em;
+    }
+    /*aesthetic collective text*/
+    .subheading {
+    font: 1.2em / 1.5 $secondary-font; 
+    margin-top: 2em;
+    }
 }
 
 /* main menu ul and li */
@@ -115,32 +149,18 @@ ul.hmenu {
     font-size: 1.55em;
 }
 
-/*HANDWOOD text*/
-header h1 {
-    text-align: center;
-    margin-top: 3.5em;
-    font-size: 3em;
-    font-weight: 700;
-    letter-spacing: .1em;
-}
-
-/*aesthetic collective text*/
-header h3 {
-    font: 1.2em / 1.5 $secondary-font; 
-    margin-top: 2em;
-}
-
 /*end of header stuff*/
+
 /*main part of body stuff*/
 
 /*header for the site sections*/
-.hdr {
+.sectitle {
     background-color: $main-hdrcolor;
 	background-position: center;
 	padding: 3em;
 	text-align: center;
     
-    h2 {
+    .sectitletext {
         font-size: 1.5em;
         font-weight: 700;
         margin-left: .5em;
@@ -151,9 +171,8 @@ header h3 {
 /*featured goods section*/
 
 .featgood {
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include bgcentertop();
+    background-color: $main-bgcolor;
 	padding-bottom: 4em;
     text-align: center;
     
@@ -218,6 +237,10 @@ header h3 {
     line-height: 10em;
     margin-top: 1.5em;
     margin-bottom: 1em;
+    
+    &:hover {
+        @include shadow
+    }
 }
 
 /*content block styles*/
@@ -227,9 +250,7 @@ header h3 {
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
     url('../images/lastupd/khomich.png');
-    background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    @include bgcenter();
 }
 
 #newscreate {
@@ -237,9 +258,7 @@ header h3 {
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
     url('../images/lastupd/create.png');
-    background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    @include bgcenter();
 }
 
 #newsflava {
@@ -247,13 +266,7 @@ header h3 {
     rgba(20,20,20, .5), 
     rgba(20,20,20, .5)),
     url('../images/lastupd/flava.png');
-    background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.newsblock:hover {
-    @include shadow
+    @include bgcentertop();
 }
 
 /*end of main part of body stuff*/
@@ -302,31 +315,91 @@ footer {
 /*links*/
 
 /*header links*/
-.hmenu a {
-    @include menu-transition();
-    color: $header-linkcolor;
-    text-decoration: none;
-}
-
-.hmenu a:hover, .hmenu a:active {
-    color: $black;
+.hmenu {
+    a {
+        @include menu-transition();
+        color: $header-linkcolor;
+        text-decoration: none;
+    
+        &:hover, &:active {
+            color: $black;
+        }
+    }
 }
 
 /*main links*/
 
-.lastupd a {
-    color: $main-hdrcolor;
+.lastupd {
+    a {
+        color: $main-hdrcolor;
+    }
 }
 
-/*footer links*/
+//footer links
 
 
-footer a {
-    @include menu-transition();
-    color: $footer-linkcolor;
-    text-decoration: none;
+footer {
+    a {
+        @include footer-blog-links();
+    
+        &:hover, &:active {
+            color: $black;
+        }
+    }
 }
 
-footer a:hover, footer a:active {
-    color: $black;
+//blog links
+
+//no underline in blog 
+article {
+    a {
+        text-decoration: none;
+    }
+}
+
+//button to show whole article
+.postbutton{
+    a {
+        @include footer-blog-links();
+    
+        &:hover, &:active {
+            color: $black;
+        }
+    }
+}
+//BLOG SECTION
+
+article {
+    display: inline-block;
+    background-color: $article-bgcolor;
+    padding: 2.5em 14em .8em 14em;
+    
+    .postdate {
+        text-transform: uppercase;
+    }
+    
+    .postpicblock {
+        @extend .lastupd;
+        @include shadow-transition();
+        height: 5em;
+        line-height: 8em;
+        margin-bottom: .7em;
+        margin-top: .5em;
+        
+        &:hover {
+        @include shadow
+        }
+    }
+    
+    .posttext {
+        font: 1em / 1.5 $blog-font;
+        margin-bottom: 1em;
+    }
+}
+
+.bottomspace {
+    background-color: $article-bgcolor;
+    padding: 2em;
+    text-align: center;
+    overflow: hidden;
 }

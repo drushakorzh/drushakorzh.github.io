@@ -2,6 +2,9 @@ body {
   font: 16px/1.5 Montserrat, sans-serif;
   color: #303030; }
 
+strong {
+  font-weight: 700; }
+
 /*responsiveness test*/
 @media (max-width: 1250px) and (orientation: landscape) {
   body {
@@ -30,12 +33,23 @@ body {
 /**/
 /*header stuff*/
 header {
-  background-color: white;
+  background-color: #fdfdfd;
+  padding-bottom: 11.8em;
+  text-align: center;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 11.8em;
-  text-align: center; }
+  /*HANDWOOD text*/
+  /*aesthetic collective text*/ }
+  header h1 {
+    text-align: center;
+    margin-top: 3.5em;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: .1em; }
+  header .subheading {
+    font: 1.2em/1.5 Vollkorn, serif;
+    margin-top: 2em; }
 
 /* main menu ul and li */
 ul.hmenu {
@@ -53,28 +67,15 @@ ul.hmenu {
 #logo {
   font-size: 1.55em; }
 
-/*HANDWOOD text*/
-header h1 {
-  text-align: center;
-  margin-top: 3.5em;
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: .1em; }
-
-/*aesthetic collective text*/
-header h3 {
-  font: 1.2em/1.5 Vollkorn, serif;
-  margin-top: 2em; }
-
 /*end of header stuff*/
 /*main part of body stuff*/
 /*header for the site sections*/
-.hdr {
-  background-color: #fafafa;
+.sectitle {
+  background-color: #f7f7f7;
   background-position: center;
   padding: 3em;
   text-align: center; }
-  .hdr h2 {
+  .sectitle .sectitletext {
     font-size: 1.5em;
     font-weight: 700;
     margin-left: .5em;
@@ -85,6 +86,7 @@ header h3 {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #fdfdfd;
   padding-bottom: 4em;
   text-align: center; }
   .featgood img {
@@ -120,15 +122,15 @@ header h3 {
 }
 */
 .featgood img:hover {
-  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85); }
+  -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6); }
 
 .featgood figure {
   display: inline-block; }
 
 /*last updates section*/
-.lastupd {
+.lastupd, article .postpicblock {
   font: 2em Vollkorn, serif;
   color: #fdfdfd;
   letter-spacing: 0.17em;
@@ -150,6 +152,10 @@ header h3 {
   line-height: 10em;
   margin-top: 1.5em;
   margin-bottom: 1em; }
+  .newsblock:hover {
+    -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+    -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+    box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6); }
 
 /*content block styles*/
 #newskhomich {
@@ -169,11 +175,6 @@ header h3 {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover; }
-
-.newsblock:hover {
-  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85); }
 
 /*end of main part of body stuff*/
 /*footer stuff*/
@@ -218,15 +219,13 @@ footer {
   transition: color .3s ease-out;
   color: #616161;
   text-decoration: none; }
-
-.hmenu a:hover, .hmenu a:active {
-  color: black; }
+  .hmenu a:hover, .hmenu a:active {
+    color: black; }
 
 /*main links*/
-.lastupd a {
-  color: #fafafa; }
+.lastupd a, article .postpicblock a {
+  color: #f7f7f7; }
 
-/*footer links*/
 footer a {
   -o-transition: color .3s ease-out;
   -ms-transition: color .3s ease-out;
@@ -235,6 +234,49 @@ footer a {
   transition: color .3s ease-out;
   color: #767877;
   text-decoration: none; }
+  footer a:hover, footer a:active {
+    color: black; }
 
-footer a:hover, footer a:active {
-  color: black; }
+article a {
+  text-decoration: none; }
+
+.postbutton a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #767877;
+  text-decoration: none; }
+  .postbutton a:hover, .postbutton a:active {
+    color: black; }
+
+article {
+  display: inline-block;
+  background-color: #fafafa;
+  padding: 2.5em 14em .8em 14em; }
+  article .postdate {
+    text-transform: uppercase; }
+  article .postpicblock {
+    -o-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+    height: 5em;
+    line-height: 8em;
+    margin-bottom: .7em;
+    margin-top: .5em; }
+    article .postpicblock:hover {
+      -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+      -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+      box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6); }
+  article .posttext {
+    font: 1em/1.5 Roboto, sans-serif;
+    margin-bottom: 1em; }
+
+.bottomspace {
+  background-color: #fafafa;
+  padding: 2em;
+  text-align: center;
+  overflow: hidden; }

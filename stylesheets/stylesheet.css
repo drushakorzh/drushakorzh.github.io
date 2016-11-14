@@ -1,17 +1,22 @@
-/* line 51, ../sass/stylesheet.scss */
+/* line 70, ../sass/stylesheet.scss */
 body {
   font: 16px/1.5 Montserrat, sans-serif;
   color: #303030;
 }
 
+/* line 75, ../sass/stylesheet.scss */
+strong {
+  font-weight: 700;
+}
+
 /*responsiveness test*/
 @media (max-width: 1250px) and (orientation: landscape) {
-  /* line 59, ../sass/stylesheet.scss */
+  /* line 82, ../sass/stylesheet.scss */
   body {
     font-size: 12px;
   }
 
-  /* line 61, ../sass/stylesheet.scss */
+  /* line 84, ../sass/stylesheet.scss */
   .featgood img {
     display: inline-block;
     width: 13em;
@@ -19,12 +24,12 @@ body {
   }
 }
 @media (max-width: 930px) and (orientation: landscape) {
-  /* line 68, ../sass/stylesheet.scss */
+  /* line 91, ../sass/stylesheet.scss */
   body {
     font-size: 11px;
   }
 
-  /* line 70, ../sass/stylesheet.scss */
+  /* line 93, ../sass/stylesheet.scss */
   .featgood img {
     display: inline-block;
     width: 11em;
@@ -32,12 +37,12 @@ body {
   }
 }
 @media (min-width: 1920px) and (orientation: landscape) {
-  /* line 77, ../sass/stylesheet.scss */
+  /* line 100, ../sass/stylesheet.scss */
   body {
     font-size: 22px;
   }
 
-  /* line 79, ../sass/stylesheet.scss */
+  /* line 102, ../sass/stylesheet.scss */
   .featgood img {
     display: inline-block;
     width: 16em;
@@ -46,25 +51,40 @@ body {
 }
 /**/
 /*header stuff*/
-/* line 89, ../sass/stylesheet.scss */
+/* line 112, ../sass/stylesheet.scss */
 header {
-  background-color: #fff;
+  background-color: #fdfdfd;
+  padding-bottom: 11.8em;
+  text-align: center;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 11.8em;
+  /*HANDWOOD text*/
+  /*aesthetic collective text*/
+}
+/* line 118, ../sass/stylesheet.scss */
+header h1 {
   text-align: center;
+  margin-top: 3.5em;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+/* line 126, ../sass/stylesheet.scss */
+header .subheading {
+  font: 1.2em/1.5 Vollkorn, serif;
+  margin-top: 2em;
 }
 
 /* main menu ul and li */
-/* line 99, ../sass/stylesheet.scss */
+/* line 133, ../sass/stylesheet.scss */
 ul.hmenu {
   text-decoration: none;
   text-align: top center;
   padding-top: 1.5em;
   margin-right: 3em;
 }
-/* line 105, ../sass/stylesheet.scss */
+/* line 139, ../sass/stylesheet.scss */
 ul.hmenu li {
   display: inline;
   margin: 4em;
@@ -73,40 +93,23 @@ ul.hmenu li {
 }
 
 /*HNDWD logo in main menu*/
-/* line 114, ../sass/stylesheet.scss */
+/* line 148, ../sass/stylesheet.scss */
 #logo {
   font-size: 1.55em;
-}
-
-/*HANDWOOD text*/
-/* line 119, ../sass/stylesheet.scss */
-header h1 {
-  text-align: center;
-  margin-top: 3.5em;
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
-/*aesthetic collective text*/
-/* line 128, ../sass/stylesheet.scss */
-header h3 {
-  font: 1.2em/1.5 Vollkorn, serif;
-  margin-top: 2em;
 }
 
 /*end of header stuff*/
 /*main part of body stuff*/
 /*header for the site sections*/
-/* line 137, ../sass/stylesheet.scss */
-.hdr {
-  background-color: #fafafa;
+/* line 157, ../sass/stylesheet.scss */
+.sectitle {
+  background-color: #f7f7f7;
   background-position: center;
   padding: 3em;
   text-align: center;
 }
-/* line 143, ../sass/stylesheet.scss */
-.hdr h2 {
+/* line 163, ../sass/stylesheet.scss */
+.sectitle .sectitletext {
   font-size: 1.5em;
   font-weight: 700;
   margin-left: .5em;
@@ -114,15 +117,16 @@ header h3 {
 }
 
 /*featured goods section*/
-/* line 153, ../sass/stylesheet.scss */
+/* line 173, ../sass/stylesheet.scss */
 .featgood {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #fdfdfd;
   padding-bottom: 4em;
   text-align: center;
 }
-/* line 160, ../sass/stylesheet.scss */
+/* line 179, ../sass/stylesheet.scss */
 .featgood img {
   -o-transition: box-shadow 0.5s ease-in-out;
   -ms-transition: box-shadow 0.5s ease-in-out;
@@ -156,21 +160,21 @@ header h3 {
       opacity: 1;
 }
 */
-/* line 191, ../sass/stylesheet.scss */
+/* line 210, ../sass/stylesheet.scss */
 .featgood img:hover {
-  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
+  -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
 }
 
-/* line 195, ../sass/stylesheet.scss */
+/* line 214, ../sass/stylesheet.scss */
 .featgood figure {
   display: inline-block;
 }
 
 /*last updates section*/
-/* line 201, ../sass/stylesheet.scss */
-.lastupd {
+/* line 220, ../sass/stylesheet.scss */
+.lastupd, article .postpicblock {
   font: 2em Vollkorn, serif;
   color: #fdfdfd;
   letter-spacing: 0.17em;
@@ -180,7 +184,7 @@ header h3 {
 }
 
 /*block for content placement*/
-/* line 212, ../sass/stylesheet.scss */
+/* line 231, ../sass/stylesheet.scss */
 .newsblock {
   -o-transition: box-shadow 0.5s ease-in-out;
   -ms-transition: box-shadow 0.5s ease-in-out;
@@ -195,9 +199,15 @@ header h3 {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
+/* line 241, ../sass/stylesheet.scss */
+.newsblock:hover {
+  -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+}
 
 /*content block styles*/
-/* line 225, ../sass/stylesheet.scss */
+/* line 248, ../sass/stylesheet.scss */
 #newskhomich {
   background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/khomich.png");
   background-position: center;
@@ -205,7 +215,7 @@ header h3 {
   background-size: cover;
 }
 
-/* line 235, ../sass/stylesheet.scss */
+/* line 256, ../sass/stylesheet.scss */
 #newscreate {
   background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/create.png");
   background-position: center;
@@ -213,7 +223,7 @@ header h3 {
   background-size: cover;
 }
 
-/* line 245, ../sass/stylesheet.scss */
+/* line 264, ../sass/stylesheet.scss */
 #newsflava {
   background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../images/lastupd/flava.png");
   background-position: center top;
@@ -221,18 +231,11 @@ header h3 {
   background-size: cover;
 }
 
-/* line 255, ../sass/stylesheet.scss */
-.newsblock:hover {
-  -webkit-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  -moz-box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-  box-shadow: 0px 22px 20px -8px rgba(128, 128, 128, 0.85);
-}
-
 /*end of main part of body stuff*/
 /*footer stuff*/
-/* line 262, ../sass/stylesheet.scss */
+/* line 275, ../sass/stylesheet.scss */
 footer {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   background-position: center;
   padding: 2em 11.7em 12em 14em;
   color: #3c3d3d;
@@ -242,22 +245,22 @@ footer {
 }
 
 /*follow footer menu*/
-/* line 273, ../sass/stylesheet.scss */
+/* line 286, ../sass/stylesheet.scss */
 .follow {
   float: left;
   line-height: 1.8em;
 }
-/* line 277, ../sass/stylesheet.scss */
+/* line 290, ../sass/stylesheet.scss */
 .follow li {
   font-size: 0.95em;
 }
 
 /*right footer menu*/
-/* line 283, ../sass/stylesheet.scss */
+/* line 296, ../sass/stylesheet.scss */
 .fmenu {
   float: right;
 }
-/* line 286, ../sass/stylesheet.scss */
+/* line 299, ../sass/stylesheet.scss */
 .fmenu li {
   display: inline;
   margin-right: 4em;
@@ -265,7 +268,7 @@ footer {
   font-size: 1em;
 }
 
-/* line 294, ../sass/stylesheet.scss */
+/* line 307, ../sass/stylesheet.scss */
 .ftext {
   font: 1em/1.5 Vollkorn, serif;
   margin-top: 3.5em;
@@ -275,7 +278,7 @@ footer {
 /*end of footer stuff*/
 /*links*/
 /*header links*/
-/* line 305, ../sass/stylesheet.scss */
+/* line 319, ../sass/stylesheet.scss */
 .hmenu a {
   -o-transition: color .3s ease-out;
   -ms-transition: color .3s ease-out;
@@ -285,20 +288,18 @@ footer {
   color: #616161;
   text-decoration: none;
 }
-
-/* line 311, ../sass/stylesheet.scss */
+/* line 324, ../sass/stylesheet.scss */
 .hmenu a:hover, .hmenu a:active {
   color: #000;
 }
 
 /*main links*/
-/* line 317, ../sass/stylesheet.scss */
-.lastupd a {
-  color: #fafafa;
+/* line 333, ../sass/stylesheet.scss */
+.lastupd a, article .postpicblock a {
+  color: #f7f7f7;
 }
 
-/*footer links*/
-/* line 324, ../sass/stylesheet.scss */
+/* line 342, ../sass/stylesheet.scss */
 footer a {
   -o-transition: color .3s ease-out;
   -ms-transition: color .3s ease-out;
@@ -308,8 +309,69 @@ footer a {
   color: #767877;
   text-decoration: none;
 }
-
-/* line 330, ../sass/stylesheet.scss */
+/* line 345, ../sass/stylesheet.scss */
 footer a:hover, footer a:active {
   color: #000;
+}
+
+/* line 355, ../sass/stylesheet.scss */
+article a {
+  text-decoration: none;
+}
+
+/* line 362, ../sass/stylesheet.scss */
+.postbutton a {
+  -o-transition: color .3s ease-out;
+  -ms-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #767877;
+  text-decoration: none;
+}
+/* line 365, ../sass/stylesheet.scss */
+.postbutton a:hover, .postbutton a:active {
+  color: #000;
+}
+
+/* line 372, ../sass/stylesheet.scss */
+article {
+  display: inline-block;
+  background-color: #fafafa;
+  padding: 2.5em 14em .8em 14em;
+}
+/* line 377, ../sass/stylesheet.scss */
+article .postdate {
+  text-transform: uppercase;
+}
+/* line 381, ../sass/stylesheet.scss */
+article .postpicblock {
+  -o-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  height: 5em;
+  line-height: 8em;
+  margin-bottom: .7em;
+  margin-top: .5em;
+}
+/* line 389, ../sass/stylesheet.scss */
+article .postpicblock:hover {
+  -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+  box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.6);
+}
+/* line 394, ../sass/stylesheet.scss */
+article .posttext {
+  font: 1em/1.5 Roboto, sans-serif;
+  margin-bottom: 1em;
+}
+
+/* line 400, ../sass/stylesheet.scss */
+.bottomspace {
+  background-color: #fafafa;
+  padding: 2em;
+  text-align: center;
+  overflow: hidden;
 }
