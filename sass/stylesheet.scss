@@ -24,11 +24,11 @@ $footer-linkcolor: #767877;
 //mixins
 @mixin shadow() {
     -webkit-box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.6);
+        rgba(189,189,189,0.7);
     -moz-box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.6);
+        rgba(189,189,189,0.7);
     box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.6);
+        rgba(189,189,189,0.7);
 }
 
 @mixin shadow-transition() {
@@ -111,42 +111,58 @@ strong {
 
 header {
 	background-color: $main-bgcolor;
-	padding-bottom: 11.8em;
-	text-align: center;
+    background-image: url('../images/cover/cover-1.jpg');
+    padding: 12.2em 4em 15em 2em;
     @include bgcentertop();
     /*HANDWOOD text*/
     h1 {
-    text-align: center;
-    margin-top: 3.5em;
-    font-size: 3em;
+    text-align: right;
+    font-size: 2.5em;
     font-weight: 700;
     letter-spacing: .1em;
-    }
-    /*aesthetic collective text*/
-    .subheading {
-    font: 1.2em / 1.5 $secondary-font; 
-    margin-top: 2em;
     }
 }
 
 /* main menu ul and li */
-ul.hmenu {
-    text-decoration: none;
-    text-align: top center;
-    padding-top: 1.5em;
-    margin-right: 3em;
+
+.wrapper {
+    opacity: 0;
+    transition: opacity .7s ease-in-out;
+    -o-transition: opacity .7s ease-in-out; 
+    -ms-transition: opacity .7s ease-in-out; 
+    -moz-transition: opacity .7s ease-in-out; 
+    -webkit-transition: opacity .7s ease-in-out; 
+    transition: box-shadow opacity .7s ease-in-out; 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    &.hmenu {
+        font: 1.2em $secondary-font;
+        text-decoration: none;
+        text-align: right;
+        position: relative;
+        top: 12em;
     
-    li {
-        display: inline;
-        margin: 4em;
-        font-size: 1.15em;
-        font-weight: 700;
+        li {
+            margin-right: 0.7em;
+            font-weight: 400;
+            font-style: italic;
+            display: inline;
+        }
     }
 }
 
-/*HNDWD logo in main menu*/
-#logo {
-    font-size: 1.55em;
+.addhdr {
+    text-transform: uppercase;
+    position: relative;
+    top: 2.16em;
+    right: 7.5em;
+    text-align: right;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: .1em;
 }
 
 /*end of header stuff*/
@@ -315,6 +331,7 @@ footer {
 /*links*/
 
 /*header links*/
+
 .hmenu {
     a {
         @include menu-transition();
@@ -324,6 +341,21 @@ footer {
         &:hover, &:active {
             color: $black;
         }
+    }
+}
+
+//burger menu 
+.burger {
+    @include menu-transition();
+    color: $header-linkcolor;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: absolute;
+    top: 1.2em;
+    right: 2em;
+    
+    &:hover, &:active {
+            color: $black;
     }
 }
 

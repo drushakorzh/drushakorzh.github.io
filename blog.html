@@ -12,15 +12,27 @@
     <title>Blog</title>
 </head>
 <body>
-    <header>
-       <ul class="hmenu">
-           <li><a href="#">STORE</a></li>
-            <li><a href="#">DESIGNS</a></li>
-            <li id="logo"><a href="index.html">HNDWD</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="#">STORY</a></li>
-        </ul>
-        <h1>HANDWOOD BLOG</h1>
+     <header>
+        <a href="#" class="toggle-nav burger">
+            <i class="fa fa-bars fa-bars-lg"></i> 
+        </a>
+            <div class="wrapper">
+            <p class="addhdr">BLOG.</p>
+            <nav>
+                <ul class="hmenu">
+                    <li><a href="index.html">Main</a></li>
+                        <li>\</li>
+                    <li><a href="#">Store</a></li>
+                        <li>\</li>
+                    <li><a href="#">Designs</a></li>
+                        <li>\</li>
+                    <li><a href="blog.html">Blog</a></li>
+                        <li>\</li>
+                    <li><a href="#">Story</a></li>
+                </ul>
+            </nav>
+            </div>
+        <h1>HANDWOOD</h1>
     </header>
     <main>
         <article>
@@ -47,7 +59,7 @@
             Все подробности в статье по ссылке ниже.</p>
             <p class="postbutton"><a href="#">Read more</a></p>
         </article>
-        <section class="bottomspace">   </section>
+        <section class="bottomspace"></section>
     </main>
     <footer>
         <div class="follow">
@@ -79,9 +91,11 @@
         </div>
     </footer>
     
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
+    <script src="js/power.js"></script>
     
 </body>
 </html>

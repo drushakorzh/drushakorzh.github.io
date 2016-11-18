@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet" type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
@@ -12,16 +12,24 @@
 </head>
 <body>
     <header>
-       <ul class="hmenu">
-           <li><a href="#">STORE</a></li>
-            <li><a href="#">DESIGNS</a></li>
-            <li id="logo"><a href="index.html">HNDWD</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="#">STORY</a></li>
-        </ul>
+        <a href="#" class="toggle-nav burger">
+            <i class="fa fa-bars fa-bars-lg"></i> 
+        </a>
+            <div class="wrapper">
+            <p class="addhdr">Menu.</p>
+            <nav>
+                <ul class="hmenu">
+                    <li><a href="#">Store</a></li>
+                        <li>\</li>
+                    <li><a href="#">Designs</a></li>
+                        <li>\</li>
+                    <li><a href="blog.html">Blog</a></li>
+                        <li>\</li>
+                    <li><a href="#">Story</a></li>
+                </ul>
+            </nav>
+            </div>
         <h1>HANDWOOD</h1>
-            <br>
-        <div class="subheading">Aesthetic Collective</div>
     </header>
     <main>
         <div class="sectitle">
@@ -84,9 +92,11 @@
         </div>
     </footer>
     
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
+    <script src="js/power.js"></script>
 
 </body>
 </html>
