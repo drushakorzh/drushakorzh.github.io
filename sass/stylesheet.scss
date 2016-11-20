@@ -10,10 +10,10 @@ $lastupd-fontcolor: #fdfdfd;
 
 //bg colors
 $header-bgcolor: #fff;
-$footer-bgcolor: #f5f5f5;
-$main-bgcolor: #fdfdfd;
+$footer-bgcolor: #f3f3f3;
+$main-bgcolor: #f7f7f7;
 $article-bgcolor: #fafafa;
-$main-hdrcolor: #f7f7f7;
+$main-hdrcolor: #f5f5f5;
 
 //link colors
 $black: #000;
@@ -24,11 +24,11 @@ $footer-linkcolor: #767877;
 //mixins
 @mixin shadow() {
     -webkit-box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.7);
+        rgba(125,125,125,0.7);
     -moz-box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.7);
+        rgba(125,125,125,0.7);
     box-shadow: 0px 52px 127px -7px 
-        rgba(189,189,189,0.7);
+        rgba(125,125,125,0.7);
 }
 
 @mixin shadow-transition() {
@@ -110,6 +110,8 @@ strong {
 /*header stuff*/
 
 header {
+//    background: url(../images/cover/cover-1.png), 
+//    linear-gradient(to right, #d8d8d8, #f2f2f2 60%);
 	background-color: $main-bgcolor;
     background-image: url('../images/cover/cover-1.jpg');
     padding: 12.2em 4em 15em 2em;
@@ -120,6 +122,15 @@ header {
     font-size: 2.5em;
     font-weight: 700;
     letter-spacing: .1em;
+        .uniqhdr {
+            opacity: 1;
+            transition: opacity .7s ease-in-out;
+            -o-transition: opacity .7s ease-in-out; 
+            -ms-transition: opacity .7s ease-in-out; 
+            -moz-transition: opacity .7s ease-in-out; 
+            -webkit-transition: opacity .7s ease-in-out; 
+            transition: box-shadow opacity .7s ease-in-out; 
+        }
     }
 }
 
@@ -157,8 +168,8 @@ ul {
 .addhdr {
     text-transform: uppercase;
     position: relative;
-    top: 2.16em;
-    right: 7.5em;
+    top: 2.15em;
+    right: 7.3em;
     text-align: right;
     font-size: 2.5em;
     font-weight: 700;
@@ -328,6 +339,7 @@ footer {
 }
 
 /*end of footer stuff*/
+
 /*links*/
 
 /*header links*/
@@ -345,21 +357,121 @@ footer {
 }
 
 //burger menu 
+
 .burger {
-    @include menu-transition();
-    color: $header-linkcolor;
-    text-decoration: none;
-    font-size: 1.5em;
+    width: 30px;
+    height: 45px;
     position: absolute;
-    top: 1.2em;
-    right: 2em;
+    top: 2.5em;
+    right: 3.5em;
+    //@include menu-transition();
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $header-linkcolor;
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        
+        &:nth-child(1) {
+            top: 0px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        
+        &:nth-child(2) {
+            top: 8px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center; 
+        }
+        
+        &:nth-child(3) {
+            top: 16px;
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+    }
     
     &:hover, &:active {
             color: $black;
     }
 }
 
+//burger click animation
+
+.open {
+    span {
+        &:nth-child(1) {
+           -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg); 
+            top: -5px;
+            left: 0px;
+        }
+            
+        &:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+            
+        &:nth-child(3) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 16px;
+            left: 0px;
+        }
+    }
+}
+
 /*main links*/
+
+.featgood {
+    a {
+        font: 1em $secondary-font;
+        font-weight: 400;
+        color: $primary-fontcolor;
+        text-decoration: none;
+        
+        &:hover, &:active {
+            color: $black;
+        }
+        
+        .price {
+            font: 0.9em $primary-font;
+        }
+    }
+    
+    figcaption {
+        position: relative;
+        top: -1em;
+    }
+}
 
 .lastupd {
     a {

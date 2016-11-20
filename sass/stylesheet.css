@@ -33,7 +33,7 @@ strong {
 /**/
 /*header stuff*/
 header {
-  background-color: #fdfdfd;
+  background-color: #f7f7f7;
   background-image: url("../images/cover/cover-1.jpg");
   padding: 12.2em 4em 15em 2em;
   background-position: center top;
@@ -45,6 +45,14 @@ header {
     font-size: 2.5em;
     font-weight: 700;
     letter-spacing: .1em; }
+    header h1 .uniqhdr {
+      opacity: 1;
+      transition: opacity .7s ease-in-out;
+      -o-transition: opacity .7s ease-in-out;
+      -ms-transition: opacity .7s ease-in-out;
+      -moz-transition: opacity .7s ease-in-out;
+      -webkit-transition: opacity .7s ease-in-out;
+      transition: box-shadow opacity .7s ease-in-out; }
 
 /* main menu ul and li */
 .wrapper {
@@ -74,8 +82,8 @@ ul {
 .addhdr {
   text-transform: uppercase;
   position: relative;
-  top: 2.16em;
-  right: 7.5em;
+  top: 2.15em;
+  right: 7.3em;
   text-align: right;
   font-size: 2.5em;
   font-weight: 700;
@@ -85,7 +93,7 @@ ul {
 /*main part of body stuff*/
 /*header for the site sections*/
 .sectitle {
-  background-color: #f7f7f7;
+  background-color: whitesmoke;
   background-position: center;
   padding: 3em;
   text-align: center; }
@@ -100,7 +108,7 @@ ul {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #fdfdfd;
+  background-color: #f7f7f7;
   padding-bottom: 4em;
   text-align: center; }
   .featgood img {
@@ -136,9 +144,9 @@ ul {
 }
 */
 .featgood img:hover {
-  -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-  -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-  box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7); }
+  -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+  -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+  box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
 
 .featgood figure {
   display: inline-block; }
@@ -148,7 +156,7 @@ ul {
   font: 2em Vollkorn, serif;
   color: #fdfdfd;
   letter-spacing: 0.17em;
-  background-color: #fdfdfd;
+  background-color: #f7f7f7;
   padding-bottom: 2.5em;
   text-align: center; }
 
@@ -167,9 +175,9 @@ ul {
   margin-top: 1.5em;
   margin-bottom: 1em; }
   .newsblock:hover {
-    -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-    -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-    box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7); }
+    -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+    -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+    box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
 
 /*content block styles*/
 #newskhomich {
@@ -193,7 +201,7 @@ ul {
 /*end of main part of body stuff*/
 /*footer stuff*/
 footer {
-  background-color: whitesmoke;
+  background-color: #f3f3f3;
   background-position: center;
   padding: 2em 11.7em 12em 14em;
   color: #3c3d3d;
@@ -237,23 +245,89 @@ footer {
     color: black; }
 
 .burger {
-  -o-transition: color .3s ease-out;
-  -ms-transition: color .3s ease-out;
-  -moz-transition: color .3s ease-out;
-  -webkit-transition: color .3s ease-out;
-  transition: color .3s ease-out;
-  color: #616161;
-  text-decoration: none;
-  font-size: 1.5em;
+  width: 30px;
+  height: 45px;
   position: absolute;
-  top: 1.2em;
-  right: 2em; }
+  top: 2.5em;
+  right: 3.5em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #616161;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+    .burger span:nth-child(1) {
+      top: 0px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center; }
+    .burger span:nth-child(2) {
+      top: 8px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center; }
+    .burger span:nth-child(3) {
+      top: 16px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center; }
   .burger:hover, .burger:active {
     color: black; }
 
+.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -5px;
+  left: 0px; }
+.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0; }
+.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 16px;
+  left: 0px; }
+
 /*main links*/
+.featgood a {
+  font: 1em Vollkorn, serif;
+  font-weight: 400;
+  color: #303030;
+  text-decoration: none; }
+  .featgood a:hover, .featgood a:active {
+    color: black; }
+  .featgood a .price {
+    font: 0.9em Montserrat, sans-serif; }
+.featgood figcaption {
+  position: relative;
+  top: -1em; }
+
 .lastupd a, article .postpicblock a {
-  color: #f7f7f7; }
+  color: whitesmoke; }
 
 footer a {
   -o-transition: color .3s ease-out;
@@ -297,9 +371,9 @@ article {
     margin-bottom: .7em;
     margin-top: .5em; }
     article .postpicblock:hover {
-      -webkit-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-      -moz-box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7);
-      box-shadow: 0px 52px 127px -7px rgba(189, 189, 189, 0.7); }
+      -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+      -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+      box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
   article .posttext {
     font: 1em/1.5 Roboto, sans-serif;
     margin-bottom: 1em; }
