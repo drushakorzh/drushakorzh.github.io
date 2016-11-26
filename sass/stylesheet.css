@@ -6,30 +6,24 @@ strong {
   font-weight: 700; }
 
 /*responsiveness test*/
-@media (max-width: 1250px) and (orientation: landscape) {
-  body {
-    font-size: 12px; }
-
-  .featgood img {
-    display: inline-block;
-    width: 13em;
-    margin: 1.5em; } }
-@media (max-width: 930px) and (orientation: landscape) {
-  body {
-    font-size: 11px; }
-
-  .featgood img {
-    display: inline-block;
-    width: 11em;
-    margin: 1.3em; } }
 @media (min-width: 1920px) and (orientation: landscape) {
   body {
     font-size: 22px; }
 
   .featgood img {
-    display: inline-block;
-    width: 16em;
     margin: 2em; } }
+@media (max-width: 580px) and (orientation: portrait) {
+  body {
+    font-size: 12px; }
+
+  .featgood img {
+    height: 20em;
+    width: 20em;
+    margin: 2em; }
+
+  footer .fmenu li {
+    display: inherit;
+    text-align: center; } }
 /**/
 /*header stuff*/
 header {
@@ -105,21 +99,32 @@ ul {
 
 /*featured goods section*/
 .featgood {
+  width: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f7f7f7;
   padding-bottom: 4em;
   text-align: center; }
-  .featgood img {
+  .featgood:empty {
+    content: "";
+    flex: auto; }
+
+figure {
+  margin-left: 3.4em;
+  margin-right: 3.4em;
+  margin-top: 2em;
+  box-sizing: border-box; }
+  figure img {
     -o-transition: box-shadow 0.5s ease-in-out;
     -ms-transition: box-shadow 0.5s ease-in-out;
     -moz-transition: box-shadow 0.5s ease-in-out;
     -webkit-transition: box-shadow 0.5s ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
-    display: inline-block;
-    width: 14.2em;
-    margin: 2em; }
+    width: 14.2em; }
 
 /*  this way doesn't work and i don't understand why
     should try it later
@@ -201,37 +206,141 @@ ul {
 /*end of main part of body stuff*/
 /*footer stuff*/
 footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   background-color: #f3f3f3;
-  background-position: center;
-  padding: 2em 11.7em 12em 14em;
+  padding: 2em 2em;
   color: #3c3d3d;
-  height: auto;
-  width: auto;
   line-height: 1.8; }
 
 /*follow footer menu*/
 .follow {
-  float: left;
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  font-size: 1.5em; }
   .follow li {
-    font-size: 0.95em; }
+    display: inline;
+    margin-top: 4em;
+    margin-left: 1em;
+    margin-right: auto; }
 
 /*right footer menu*/
 .fmenu {
-  float: right; }
+  margin-top: 3em; }
   .fmenu li {
     display: inline;
-    margin-right: 4em;
-    margin-top: 4em;
-    font-size: 1em; }
+    font-size: 1em;
+    margin-left: 1.5em;
+    margin-right: auto; }
 
 .ftext {
-  font: 1em/1.5 Vollkorn, serif;
-  margin-top: 3.5em;
-  line-height: 1.8em; }
+  margin-top: 1.5em;
+  font: 700 1.4em Montserrat, sans-serif; }
 
 /*end of footer stuff*/
-/*links*/
+article {
+  display: inline-block;
+  background-color: #fafafa;
+  padding: 2.5em 14em .8em 14em; }
+  article .postdate {
+    text-transform: uppercase; }
+  article .postpicblock {
+    -o-transition: box-shadow 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+    height: 5em;
+    line-height: 8em;
+    margin-bottom: .7em;
+    margin-top: .5em; }
+    article .postpicblock:hover {
+      -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+      -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
+      box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
+  article .posttext {
+    font: 1em/1.5 Roboto, sans-serif;
+    margin-bottom: 1em; }
+
+.bottomspace {
+  background-color: #fafafa;
+  padding: 2em;
+  text-align: center;
+  overflow: hidden; }
+
+.product-header {
+  background: whitesmoke;
+  background-image: none;
+  font: Montserrat, sans-serif;
+  color: #303030;
+  height: 3em;
+  width: 100%;
+  line-height: 3em;
+  padding: .7em 0em .7em 0em;
+  display: table; }
+  .product-header .left, .product-header .right {
+    width: 25%;
+    display: table-cell; }
+    .product-header .left span, .product-header .right span {
+      margin-left: 2em;
+      font-weight: 700; }
+  .product-header .central {
+    width: 50%;
+    display: table-cell;
+    text-align: center; }
+    .product-header .central span {
+      font-weight: 700;
+      font-size: 1.5em; }
+
+.product {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 3em 5em 5em 5em; }
+  .product .product-left {
+    width: 25em;
+    height: 25em;
+    padding-right: 2em; }
+    .product .product-left img {
+      height: 25em;
+      width: 25em; }
+  .product .product-right {
+    width: 25em;
+    height: 25em;
+    padding-left: 2em; }
+    .product .product-right .product-text {
+      text-align: left;
+      padding-right: 5em; }
+      .product .product-right .product-text .product-name {
+        font-size: 1.4em;
+        font-weight: 700; }
+      .product .product-right .product-text .product-price {
+        font-size: 1.2em; }
+      .product .product-right .product-text .product-description {
+        margin-top: .5em;
+        font: 1.2em 1.5em Roboto, sans-serif; }
+      .product .product-right .product-text .product-specifics {
+        margin-top: 1em;
+        font: 1.2em 1.5em Montserrat, sans-serif; }
+      .product .product-right .product-text .product-button {
+        position: relative;
+        top: 1em;
+        display: inline-block;
+        padding: 1.3em 7em;
+        background-color: #e5e5e5;
+        border: none;
+        font: 700 0.9em Montserrat, sans-serif;
+        -o-transition: background-color 0.5s ease-in-out;
+        -ms-transition: background-color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out; }
+        .product .product-right .product-text .product-button:hover {
+          background-color: #d6d6d6; }
+
+/*LINKS*/
 /*header links*/
 .hmenu a {
   -o-transition: color .3s ease-out;
@@ -323,8 +432,7 @@ footer {
   .featgood a .price {
     font: 0.9em Montserrat, sans-serif; }
 .featgood figcaption {
-  position: relative;
-  top: -1em; }
+  position: relative; }
 
 .lastupd a, article .postpicblock a {
   color: whitesmoke; }
@@ -353,33 +461,3 @@ article a {
   text-decoration: none; }
   .postbutton a:hover, .postbutton a:active {
     color: black; }
-
-article {
-  display: inline-block;
-  background-color: #fafafa;
-  padding: 2.5em 14em .8em 14em; }
-  article .postdate {
-    text-transform: uppercase; }
-  article .postpicblock {
-    -o-transition: box-shadow 0.5s ease-in-out;
-    -ms-transition: box-shadow 0.5s ease-in-out;
-    -moz-transition: box-shadow 0.5s ease-in-out;
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
-    height: 5em;
-    line-height: 8em;
-    margin-bottom: .7em;
-    margin-top: .5em; }
-    article .postpicblock:hover {
-      -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-      -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-      box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
-  article .posttext {
-    font: 1em/1.5 Roboto, sans-serif;
-    margin-bottom: 1em; }
-
-.bottomspace {
-  background-color: #fafafa;
-  padding: 2em;
-  text-align: center;
-  overflow: hidden; }

@@ -6,71 +6,63 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet" type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
     <title>HNDWD</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="toggle-nav burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-            <div class="wrapper">
-            <p class="addhdr">Menu.</p>
-            <nav>
-                <ul class="hmenu">
-                    <li><a href="index.html">Main</a></li>
-                        <li>\</li>
-                    <li><a href="store.html">Store</a></li>
-                        <li>\</li>
-                    <li><a href="#">Designs</a></li>
-                        <li>\</li>
-                    <li><a href="blog.html">Blog</a></li>
-                        <li>\</li>
-                    <li><a href="#">Story</a></li>
-                </ul>
-            </nav>
-            </div>
-        <h1>HANDWOOD</h1>
-    </header>
-    <main>
+<header class="product-header">
+    <div class="left hmenu"><span><a href="../store.html">STORE</a></span></div>
+    <div class="central hmenu"><span><a href="../index.html">HANDWOOD</a></span></div>
+        <div class="right"></div>
+</header>
+
+<main>
+<div class="product">
+    <div class="product-left">
+        <img src="../images/store/afsakid.png">
+    </div>
+    <div class="product-right">
+        <div class="product-text">
+            <h2 class="product-name">FOGGY NOTE: AFSAKIÐ</h2>
+            <p class="product-price">80 UAH</p>
+            <p class="product-description">Устроив небольшую коллаборацию с нашим фотографом Вадимом Поповом, нам удалось создать эту серию скетчбуков для любителей таинственных туманных гор. Под плотной обложкой 80 листов привычной кремовой бумаги. На выбор в серии есть пять скетчбуков.</p>
+            <p class="product-specifics">A5 | 80 Sheets | Cream Paper</p>
+            <button type="button" class="product-button">ADD TO CART</button>
+        </div>
+    </div>
+</div>
+
         <div class="sectitle">
-            <div class="sectitletext">FEATURED GOODS</div>
+            <div class="sectitletext">RELATED GOODS</div>
         </div>
         <div class="featgood">
             <figure>
-                <a href="#"><img src="images/store/field.png">
-                <figcaption>FIELD LOG</figcaption>
+                <a href="#"><img src="../images/store/radljost.png">
+                <figcaption>FOGGY NOTE: RAÐLJÓST</figcaption>
                 </a>
             </figure>
             <figure>
-                <a href="#"><img src="images/store/imagination.png">
-                <figcaption>IMAGINATION NOTES</figcaption>
+                <a href="#"><img src="../images/store/heima.png">
+                <figcaption>FOGGY NOTE: HEIMA</figcaption>
                 </a>
             </figure>
             <figure>
-                <a href="#"><img src="images/store/simple.png">
-                <figcaption>SIMPLE NOTE</figcaption>
+                <a href="#"><img src="../images/store/andvari.png">
+                <figcaption>FOGGY NOTE: ANDVARI</figcaption>
                 </a>
             </figure>
             <figure>
-                <a href="#"><img src="images/store/travel.png">
-                <figcaption>TRAVEL NOTE</figcaption>
+                <a href="#"><img src="../images/store/gluggavedur.png">
+                <figcaption>FOGGY NOTE: GLUGGAVEÐUR</figcaption>
                 </a>
             </figure>
         </div>
-        <div class="sectitle">
-            <div class="sectitletext">LAST UPDATES</div>
-        </div>
-        <div class="lastupd">
-            <a href="#"><div class="newsblock" id="newskhomich">OUR NEW MEMBER | DIMA KHOMICH</div></a>
-            <a href="#"><div class="newsblock" id="newscreate">WE CREATE DESIGN SOLUTIONS</div></a>
-            <a href="#"><div class="newsblock" id="newsflava">INTERVIEW WITH FREE FLOW FLAVA</div></a>
-        </div>
-    </main>
-    <footer>
+
+</main>
+
+<footer>
         <div class="follow">
             <ul>
                 <li><a href="https://vk.com/hndwd" target="_blank">
@@ -109,7 +101,7 @@
     <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
-    <script src="js/power.js"></script>
+    <script src="../js/power.js"></script>
 
 </body>
 </html>

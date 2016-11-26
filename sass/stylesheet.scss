@@ -13,6 +13,8 @@ $header-bgcolor: #fff;
 $footer-bgcolor: #f3f3f3;
 $main-bgcolor: #f7f7f7;
 $article-bgcolor: #fafafa;
+$button-bgcolor-hover: #D6D6D6;
+$button-bgcolor: #E5E5E5;
 $main-hdrcolor: #f5f5f5;
 
 //link colors
@@ -37,6 +39,14 @@ $footer-linkcolor: #767877;
     -moz-transition: box-shadow 0.5s ease-in-out; 
     -webkit-transition: box-shadow 0.5s ease-in-out; 
     transition: box-shadow 0.5s ease-in-out; 
+}
+
+@mixin buttonhover-transition() {
+    -o-transition: background-color 0.5s ease-in-out; 
+    -ms-transition: background-color 0.5s ease-in-out; 
+    -moz-transition: background-color 0.5s ease-in-out; 
+    -webkit-transition: background-color 0.5s ease-in-out; 
+    transition: background-color 0.5s ease-in-out; 
 }
 
 @mixin footer-blog-links() {
@@ -78,40 +88,67 @@ strong {
 
 /*responsiveness test*/
 
-@media (max-width: 1250px) and (orientation: landscape) {
-    body { 
-        font-size: 12px;}
-    .featgood img {
-        display: inline-block;
-        width: 13em;
-        margin: 1.5em; }
-}
-
-@media (max-width: 930px) and (orientation: landscape) {
-    body { 
-        font-size: 11px;}
-    .featgood img {
-        display: inline-block;
-        width: 11em;
-        margin: 1.3em; }
-}
-
 @media (min-width: 1920px) and (orientation: landscape) {
     body { 
         font-size: 22px;}
     .featgood img {
-        display: inline-block;
-        width: 16em;
+        //display: inline-block;
+        //width: 16em;
         margin: 2em; }
 }
+
+@media (max-width: 580px) and (orientation: portrait) {
+    body { 
+        font-size: 12px;}
+    .featgood img {
+        height: 20em;
+        width: 20em;
+        margin: 2em; }
+    
+    footer {
+        .fmenu {
+            li {
+            display: inherit;
+            text-align: center;
+            } 
+        }
+    }
+    
+}
+
+//@media (max-width: 930px) and (orientation: landscape) {
+//    body { 
+//        background-color: $black;
+//        font-size: 100px;}
+//    .featgood img {
+//        //display: inline-block;
+//        //width: 11em;
+//        margin: 1.3em; }
+//    .product-button {
+//        position: relative;
+//        top: 10em;}
+//    
+//}
+//
+//@media (max-width: 500px) and (orientation: landscape) {
+//    body { 
+//        font-size: 9px;
+//    }
+//    
+//    .featgood {
+//        display: flex;
+//        flex-flow: column;
+//        justify-content: center;
+//    }
+//    
+//    
+//}
 
 /**/
 
 /*header stuff*/
 
 header {
-//    background: url(../images/cover/cover-1.png), 
-//    linear-gradient(to right, #d8d8d8, #f2f2f2 60%);
 	background-color: $main-bgcolor;
     background-image: url('../images/cover/cover-1.jpg');
     padding: 12.2em 4em 15em 2em;
@@ -198,18 +235,35 @@ ul {
 /*featured goods section*/
 
 .featgood {
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 	@include bgcentertop();
     background-color: $main-bgcolor;
 	padding-bottom: 4em;
     text-align: center;
     
-    img {
-        @include shadow-transition();
-        display: inline-block;
-        width: 14.2em;
-        margin: 2em;
+    &:empty {
+        content: "";
+        flex: auto;
     }
 }
+    
+    figure {
+        
+        margin-left: 3.4em;
+        margin-right: 3.4em;
+        margin-top: 2em;
+        box-sizing: border-box;
+    
+        img {
+            @include shadow-transition();
+            //display: inline-block;
+            width: 14.2em;
+        }
+    }
+
 
 /*  this way doesn't work and i don't understand why
     should try it later
@@ -300,47 +354,203 @@ ul {
 
 /*footer stuff*/
 footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
     background-color: $footer-bgcolor;
-	background-position: center;
-	padding: 2em 11.7em 12em 14em;
+    padding: 2em 2em;
     color: $footer-fontcolor;
-    height: auto;
-    width: auto;
     line-height: 1.8;
+    
+    div {
+        
+    }
 }
 
 /*follow footer menu*/
 .follow {
-    float: left;
     line-height: 1.8em;
+    font-size: 1.5em;
     
     li {
-        font-size: 0.95em;
+        display: inline;
+        margin-top: 4em;
+        margin-left: 1em;
+        margin-right: auto;
     }
 }
 
 /*right footer menu*/
 .fmenu {
-    float: right;
+    margin-top: 3em;
     
     li {
         display: inline;
-        margin-right: 4em;
-        margin-top: 4em;
         font-size: 1em; 
+        margin-left: 1.5em;
+        margin-right: auto;
+        
     }
 }
 
 .ftext {
-    font: 1em / 1.5 $secondary-font; 
-    margin-top: 3.5em;
-    line-height: 1.8em;
+    margin-top: 1.5em;
+    font: 700 1.4em $primary-font; 
     
 }
 
 /*end of footer stuff*/
 
-/*links*/
+
+//BLOG SECTION
+
+
+article {
+    display: inline-block;
+    background-color: $article-bgcolor;
+    padding: 2.5em 14em .8em 14em;
+    
+    //date of article post
+    .postdate {
+        text-transform: uppercase;
+    }
+    
+    //block with picture
+    .postpicblock {
+        @extend .lastupd;
+        @include shadow-transition();
+        height: 5em;
+        line-height: 8em;
+        margin-bottom: .7em;
+        margin-top: .5em;
+        
+        &:hover {
+        @include shadow
+        }
+    }
+    
+    //main text of post
+    .posttext {
+        font: 1em / 1.5 $blog-font;
+        margin-bottom: 1em;
+    }
+}
+
+//blank space under all posts
+.bottomspace {
+    background-color: $article-bgcolor;
+    padding: 2em;
+    text-align: center;
+    overflow: hidden;
+}
+
+//PRODUCT PAGE SECTION
+
+//header of product page 
+.product-header {
+    background: $main-hdrcolor;
+    background-image: none;
+    font: $primary-font;
+    color: $primary-fontcolor;
+    height: 3em;
+    width: 100%;
+    line-height: 3em;
+    padding: .7em 0em .7em 0em;
+    display: table;
+     
+    //left section of header
+    .left {
+        width: 25%;
+        display: table-cell;
+            
+        span {
+            margin-left: 2em;
+            font-weight: 700;
+        }
+    }
+    //central sect. of header
+    .central {
+        width: 50%;
+        display: table-cell;
+        text-align: center;
+            
+        span {
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+    }
+    //right sect. of header
+    .right {
+        @extend .left;
+    }
+}
+
+//product page flexbox
+
+.product {
+    background-color: $main-bgcolor;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 3em 5em 5em 5em;
+    
+    .product-left {
+        width: 25em;
+        height: 25em;
+        padding-right: 2em;
+
+        img {
+            height: 25em;
+            width: 25em;
+        }
+    }
+
+    .product-right {
+        width: 25em;
+        height: 25em;
+        padding-left: 2em;
+
+        .product-text {
+
+            text-align: left;
+            padding-right: 5em;
+       
+            .product-name {
+                font-size: 1.4em;
+                font-weight: 700;
+            }
+            .product-price {
+                font-size: 1.2em;
+            }
+            .product-description {
+                margin-top: .5em;
+                font: 1.2em 1.5em $blog-font;
+            }
+            .product-specifics {
+                margin-top: 1em;
+                font: 1.2em 1.5em $primary-font;
+            }
+            .product-button {
+                position: relative;
+                top: 1em;
+                display: inline-block;
+                padding: 1.3em 7em;
+                background-color: $button-bgcolor;
+                border: none;
+                font: 700 .9em $primary-font;
+                @include buttonhover-transition();
+
+                    &:hover {
+                        background-color: 
+           $button-bgcolor-hover;
+                  }
+              }
+            }
+        }
+    }
+
+/*LINKS*/
 
 /*header links*/
 
@@ -469,7 +679,7 @@ footer {
     
     figcaption {
         position: relative;
-        top: -1em;
+        //top: -1em;
     }
 }
 
@@ -510,40 +720,4 @@ article {
             color: $black;
         }
     }
-}
-//BLOG SECTION
-
-article {
-    display: inline-block;
-    background-color: $article-bgcolor;
-    padding: 2.5em 14em .8em 14em;
-    
-    .postdate {
-        text-transform: uppercase;
-    }
-    
-    .postpicblock {
-        @extend .lastupd;
-        @include shadow-transition();
-        height: 5em;
-        line-height: 8em;
-        margin-bottom: .7em;
-        margin-top: .5em;
-        
-        &:hover {
-        @include shadow
-        }
-    }
-    
-    .posttext {
-        font: 1em / 1.5 $blog-font;
-        margin-bottom: 1em;
-    }
-}
-
-.bottomspace {
-    background-color: $article-bgcolor;
-    padding: 2em;
-    text-align: center;
-    overflow: hidden;
 }
