@@ -6,15 +6,33 @@ strong {
   font-weight: 700; }
 
 /*responsiveness test*/
-@media (min-width: 1920px) and (orientation: landscape) {
-  body {
-    font-size: 22px; }
-
-  .featgood img {
-    margin: 2em; } }
-@media (max-width: 580px) and (orientation: portrait) {
+@media (max-width: 649px) and (orientation: portrait) {
   body {
     font-size: 12px; }
+    body .lastupd {
+      font-size: 1.2em; }
+    body article img {
+      margin-top: 2em; }
+    body article .flexpost {
+      padding: 3em 4.5em .8em 3em; }
+      body article .flexpost iframe {
+        height: 100px; }
+
+  .featgood img {
+    height: 20em;
+    width: 20em;
+    margin: 2em; }
+
+  footer .fmenu li {
+    display: inherit;
+    text-align: center; } }
+@media (max-width: 1000px) and (orientation: landscape) {
+  body {
+    font-size: 14px; }
+    body article img {
+      margin-top: 2em; }
+    body article .flexpost {
+      padding: 3em 6em 3em 6em; }
 
   .featgood img {
     height: 20em;
@@ -98,33 +116,53 @@ ul {
     letter-spacing: .1em; }
 
 /*featured goods section*/
-.featgood {
-  width: auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+section {
   background-color: #f7f7f7;
-  padding-bottom: 4em;
-  text-align: center; }
-  .featgood:empty {
-    content: "";
-    flex: auto; }
+  padding-bottom: 2em; }
+  section .featgood {
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 1.5em;
+    text-align: center; }
+    section .featgood:empty {
+      content: "";
+      flex: auto; }
+  section figure {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    box-sizing: border-box; }
+    section figure img {
+      margin: 1.5em;
+      -o-transition: box-shadow 0.5s ease-in-out;
+      -ms-transition: box-shadow 0.5s ease-in-out;
+      -moz-transition: box-shadow 0.5s ease-in-out;
+      -webkit-transition: box-shadow 0.5s ease-in-out;
+      transition: box-shadow 0.5s ease-in-out;
+      width: 15em; }
 
-figure {
-  margin-left: 3.4em;
-  margin-right: 3.4em;
-  margin-top: 2em;
-  box-sizing: border-box; }
-  figure img {
-    -o-transition: box-shadow 0.5s ease-in-out;
-    -ms-transition: box-shadow 0.5s ease-in-out;
-    -moz-transition: box-shadow 0.5s ease-in-out;
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
-    width: 14.2em; }
+.button {
+  display: flex;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #303030;
+  padding: 1em 3em;
+  background-color: #f7f7f7;
+  font: 700 0.9em Montserrat, sans-serif;
+  color: #303030;
+  -o-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer; }
+  .button:hover {
+    background-color: #d6d6d6; }
 
 /*  this way doesn't work and i don't understand why
     should try it later
@@ -149,15 +187,18 @@ figure {
 }
 */
 .featgood img:hover {
-  -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-  -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-  box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
+  -webkit-box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6);
+  -moz-box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6);
+  box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6); }
 
 .featgood figure {
   display: inline-block; }
 
 /*last updates section*/
-.lastupd, article .postpicblock {
+.lastupd {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   font: 2em Vollkorn, serif;
   color: #fdfdfd;
   letter-spacing: 0.17em;
@@ -172,17 +213,15 @@ figure {
   -moz-transition: box-shadow 0.5s ease-in-out;
   -webkit-transition: box-shadow 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out;
-  display: inline-block;
-  text-align: center;
   width: 35em;
   height: 10em;
   line-height: 10em;
   margin-top: 1.5em;
   margin-bottom: 1em; }
   .newsblock:hover {
-    -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-    -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-    box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
+    -webkit-box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6);
+    -moz-box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6);
+    box-shadow: 0px 51px 61px -11px rgba(99, 99, 99, 0.6); }
 
 /*content block styles*/
 #newskhomich {
@@ -209,11 +248,9 @@ footer {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
   background-color: #f3f3f3;
   padding: 2em 2em;
-  color: #3c3d3d;
-  line-height: 1.8; }
+  color: #3c3d3d; }
 
 /*follow footer menu*/
 .follow {
@@ -223,45 +260,60 @@ footer {
     display: inline;
     margin-top: 4em;
     margin-left: 1em;
-    margin-right: auto; }
+    margin-right: 1em; }
 
-/*right footer menu*/
+/*info footer menu*/
 .fmenu {
-  margin-top: 3em; }
+  margin-top: 2em; }
   .fmenu li {
     display: inline;
     font-size: 1em;
     margin-left: 1.5em;
-    margin-right: auto; }
+    margin-right: 1.5em; }
 
 .ftext {
-  margin-top: 1.5em;
+  margin-top: 1em;
   font: 700 1.4em Montserrat, sans-serif; }
 
 /*end of footer stuff*/
 article {
-  display: inline-block;
-  background-color: #fafafa;
-  padding: 2.5em 14em .8em 14em; }
-  article .postdate {
-    text-transform: uppercase; }
-  article .postpicblock {
-    -o-transition: box-shadow 0.5s ease-in-out;
-    -ms-transition: box-shadow 0.5s ease-in-out;
-    -moz-transition: box-shadow 0.5s ease-in-out;
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
-    height: 5em;
-    line-height: 8em;
-    margin-bottom: .7em;
-    margin-top: .5em; }
-    article .postpicblock:hover {
-      -webkit-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-      -moz-box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7);
-      box-shadow: 0px 52px 127px -7px rgba(125, 125, 125, 0.7); }
+  background-color: #fafafa; }
+  article .flexpost {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 3em 14em 3em 14em; }
+  article h2 {
+    font: 700 3em Montserrat, sans-serif;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.3em; }
+  article .postinfo {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    color: #626262; }
+    article .postinfo span {
+      color: black; }
   article .posttext {
-    font: 1em/1.5 Roboto, sans-serif;
-    margin-bottom: 1em; }
+    font: 1em/1.5 Roboto, sans-serif; }
+    article .posttext span {
+      font-weight: 700; }
+  article .postimg {
+    width: 100%;
+    text-align: center; }
+  article .postauthor {
+    margin: 5em;
+    text-align: center; }
+    article .postauthor img {
+      border-radius: 50%;
+      width: 5em;
+      height: 5em; }
+    article .postauthor p {
+      margin-top: .5em;
+      font: 700 1.8em Montserrat, sans-serif; }
+      article .postauthor p span {
+        font: 0.6em Vollkorn, serif;
+        color: #626262; }
 
 .bottomspace {
   background-color: #fafafa;
@@ -328,15 +380,16 @@ article {
         position: relative;
         top: 1em;
         display: inline-block;
+        border: 2px solid;
         padding: 1.3em 7em;
-        background-color: #e5e5e5;
-        border: none;
+        background-color: #f7f7f7;
         font: 700 0.9em Montserrat, sans-serif;
         -o-transition: background-color 0.5s ease-in-out;
         -ms-transition: background-color 0.5s ease-in-out;
         -moz-transition: background-color 0.5s ease-in-out;
         -webkit-transition: background-color 0.5s ease-in-out;
-        transition: background-color 0.5s ease-in-out; }
+        transition: background-color 0.5s ease-in-out;
+        cursor: pointer; }
         .product .product-right .product-text .product-button:hover {
           background-color: #d6d6d6; }
 
@@ -434,8 +487,9 @@ article {
 .featgood figcaption {
   position: relative; }
 
-.lastupd a, article .postpicblock a {
-  color: whitesmoke; }
+.lastupd a {
+  color: whitesmoke;
+  text-decoration: none; }
 
 footer a {
   -o-transition: color .3s ease-out;

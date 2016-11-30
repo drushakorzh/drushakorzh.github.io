@@ -5,6 +5,7 @@ $blog-font: Roboto, sans-serif;
 
 //font colors
 $primary-fontcolor: #303030;
+$secondary-fontcolor: #626262;
 $footer-fontcolor: #3c3d3d;
 $lastupd-fontcolor: #fdfdfd;
 
@@ -25,12 +26,9 @@ $footer-linkcolor: #767877;
 
 //mixins
 @mixin shadow() {
-    -webkit-box-shadow: 0px 52px 127px -7px 
-        rgba(125,125,125,0.7);
-    -moz-box-shadow: 0px 52px 127px -7px 
-        rgba(125,125,125,0.7);
-    box-shadow: 0px 52px 127px -7px 
-        rgba(125,125,125,0.7);
+    -webkit-box-shadow: 0px 51px 61px -11px rgba(99,99,99,0.6);
+-moz-box-shadow: 0px 51px 61px -11px rgba(99,99,99,0.6);
+box-shadow: 0px 51px 61px -11px rgba(99,99,99,0.6);
 }
 
 @mixin shadow-transition() {
@@ -88,23 +86,44 @@ strong {
 
 /*responsiveness test*/
 
-@media (min-width: 1920px) and (orientation: landscape) {
-    body { 
-        font-size: 22px;}
-    .featgood img {
-        //display: inline-block;
-        //width: 16em;
-        margin: 2em; }
-}
+//@media (min-width: 1920px) and (orientation: landscape) {
+//    body { 
+//        font-size: 22px;}
+//    .featgood img {
+//        //display: inline-block;
+//        //width: 16em;
+//        margin: 2em; }
+//}
 
-@media (max-width: 580px) and (orientation: portrait) {
+@media (max-width: 649px) and (orientation: portrait) {
     body { 
-        font-size: 12px;}
+        font-size: 12px;
+        
+        .lastupd {
+            font-size: 1.2em;
+        }
+        
+        article {
+            
+            img {
+                margin-top: 2em;
+            }
+        
+            .flexpost {
+            padding: 3em 4.5em .8em 3em;
+                
+                iframe {
+                    height: 100px;
+                }
+            }
+        }
+    }
     .featgood img {
         height: 20em;
         width: 20em;
-        margin: 2em; }
-    
+        margin: 2em; 
+    }
+
     footer {
         .fmenu {
             li {
@@ -113,7 +132,37 @@ strong {
             } 
         }
     }
-    
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    body { 
+        font-size: 14px;
+        
+        article {
+        
+            img {
+                margin-top: 2em;
+            }
+            
+            .flexpost {
+            padding: 3em 6em 3em 6em;
+            }
+        }
+    }
+    .featgood img {
+        height: 20em;
+        width: 20em;
+        margin: 2em; 
+    }
+
+    footer {
+        .fmenu {
+            li {
+            display: inherit;
+            text-align: center;
+            } 
+        }
+    }
 }
 
 //@media (max-width: 930px) and (orientation: landscape) {
@@ -233,16 +282,19 @@ ul {
 }
 
 /*featured goods section*/
-
+section {
+    background-color: $main-bgcolor;
+    padding-bottom: 2em;
+    
 .featgood {
     width: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    //justify-content: center;
 	@include bgcentertop();
-    background-color: $main-bgcolor;
-	padding-bottom: 4em;
+	padding-bottom: 1.5em;
     text-align: center;
+    
     
     &:empty {
         content: "";
@@ -252,18 +304,38 @@ ul {
     
     figure {
         
-        margin-left: 3.4em;
-        margin-right: 3.4em;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 2em;
         box-sizing: border-box;
+        
     
         img {
+            margin: 1.5em;
             @include shadow-transition();
-            //display: inline-block;
-            width: 14.2em;
+            width: 15em;
         }
     }
+}
 
+//main site button
+.button {
+    display: flex;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid $primary-fontcolor;
+    padding: 1em 3em;
+    background-color: $main-bgcolor;
+    font: 700 .9em $primary-font;
+    color: $primary-fontcolor;
+    @include buttonhover-transition();
+    cursor: pointer;
+
+    &:hover {
+        background-color: $button-bgcolor-hover;
+    }
+}
 
 /*  this way doesn't work and i don't understand why
     should try it later
@@ -299,6 +371,9 @@ ul {
 /*last updates section*/
 
 .lastupd {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     font: 2em $secondary-font;
     color: $lastupd-fontcolor;
     letter-spacing: 0.17em;
@@ -311,8 +386,6 @@ ul {
 
 .newsblock {
     @include shadow-transition();
-    display: inline-block;
-    text-align: center;
     width: 35em;
     height: 10em;
     line-height: 10em;
@@ -357,15 +430,9 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
     background-color: $footer-bgcolor;
     padding: 2em 2em;
     color: $footer-fontcolor;
-    line-height: 1.8;
-    
-    div {
-        
-    }
 }
 
 /*follow footer menu*/
@@ -377,25 +444,26 @@ footer {
         display: inline;
         margin-top: 4em;
         margin-left: 1em;
-        margin-right: auto;
+        margin-right: 1em;
     }
 }
 
-/*right footer menu*/
+/*info footer menu*/
 .fmenu {
-    margin-top: 3em;
+    margin-top: 2em;
     
     li {
         display: inline;
         font-size: 1em; 
         margin-left: 1.5em;
-        margin-right: auto;
+        margin-right: 1.5em;
         
     }
 }
 
+//footer text
 .ftext {
-    margin-top: 1.5em;
+    margin-top: 1em;
     font: 700 1.4em $primary-font; 
     
 }
@@ -405,37 +473,95 @@ footer {
 
 //BLOG SECTION
 
-
 article {
-    display: inline-block;
     background-color: $article-bgcolor;
-    padding: 2.5em 14em .8em 14em;
     
-    //date of article post
-    .postdate {
-        text-transform: uppercase;
+    //flexbox for article text
+    .flexpost {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 3em 14em 3em 14em;
     }
     
-    //block with picture
-    .postpicblock {
-        @extend .lastupd;
-        @include shadow-transition();
-        height: 5em;
-        line-height: 8em;
-        margin-bottom: .7em;
-        margin-top: .5em;
+    //article header
+    h2 {
+        font: 700 3em $primary-font;
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 0.3em;
+    }
+
+    //date of article post
+    .postinfo {
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        color: $secondary-fontcolor;
         
-        &:hover {
-        @include shadow
+        //author highlight
+        span {
+            color: $black;
         }
     }
+    
+//    //block with picture
+//    .postpicblock {
+//        @extend .lastupd;
+//        @include shadow-transition();
+//        height: 5em;
+//        line-height: 8em;
+//        margin-bottom: .7em;
+//        margin-top: .5em;
+//        
+//        &:hover {
+//        @include shadow
+//        }
+//    }
     
     //main text of post
     .posttext {
         font: 1em / 1.5 $blog-font;
-        margin-bottom: 1em;
+        
+        span {
+            font-weight: 700;
+        }
+    }
+    
+    //images inside articles
+    .postimg {
+        width: 100%;
+        text-align: center;
+    }
+    
+    //'author of post' section at the end of the main text
+    .postauthor {
+        
+        margin: 5em;
+        text-align: center;
+        
+        //photo of the author
+        img {
+            border-radius: 50%;
+            width: 5em;
+            height: 5em;
+            
+        }
+        
+        //author name
+        p {
+            margin-top: .5em;
+            font: 700 1.8em $primary-font;
+            
+            //about author
+            span {
+                font: .6em $secondary-font;
+                color: $secondary-fontcolor;
+            }
+        }
     }
 }
+
+
 
 //blank space under all posts
 .bottomspace {
@@ -535,11 +661,13 @@ article {
                 position: relative;
                 top: 1em;
                 display: inline-block;
+                border: 2px solid;
                 padding: 1.3em 7em;
-                background-color: $button-bgcolor;
-                border: none;
+                background-color: $main-bgcolor;
+                //border: none;
                 font: 700 .9em $primary-font;
                 @include buttonhover-transition();
+                cursor: pointer;
 
                     &:hover {
                         background-color: 
@@ -675,7 +803,7 @@ article {
         .price {
             font: 0.9em $primary-font;
         }
-    }
+}
     
     figcaption {
         position: relative;
@@ -686,6 +814,7 @@ article {
 .lastupd {
     a {
         color: $main-hdrcolor;
+        text-decoration: none;
     }
 }
 
